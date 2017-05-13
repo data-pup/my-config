@@ -36,6 +36,12 @@ fi
 echo
 
 # Copy the .vimrc file.
+if [[ -f ~/.vimrc ]]
+then
+  echo "Copying ~/.vimrc into current directory..."
+  /bin/cp -av ~/.vimrc .
+fi
+
 
 # Print a message informing the user that the script is done.
 echo "Finished!"
