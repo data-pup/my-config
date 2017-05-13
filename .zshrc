@@ -62,11 +62,6 @@ my_update() {
   npm -g update
   npm install --global npm@latest
 
-  # Update RVM
-  # TODO: Check
-  rvm get
-  gem update
-
   # Update Atom packages, and upgrade versions.
   apm update
   apm upgrade
