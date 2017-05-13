@@ -38,15 +38,12 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Add a more detailed prompt to the less pager
 # Add coloring to the terminal using LESSOPEN. Add this with the R flag
-alias myless='less -m -N -g -i -J --line-numbers --underline-special'
+alias lless='less -m -N -g -i -J --line-numbers --underline-special'
+
+# Use "highlight" in place of "cat"
+alias ccat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style moria"
 
 # Alter these environment variables to add colors,
 # and line numbers when viewing documents in LESS.
 export LESSOPEN="| $(which highlight) %s --out-format xterm256 --line-numbers --quiet --force --style moria"
 export LESS=" -R"
-
-# NOTE: Commented this out for now, use myless to view line numbers
-# alias less='less -m -N -g -i -J --line-numbers --underline-special'
-
-# Use "highlight" in place of "cat"
-alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style moria"
