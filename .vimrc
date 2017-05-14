@@ -59,6 +59,7 @@ endif
 
 " Line Numbers
 set number
+set relativenumber
 set ruler
 set nowrap
 
