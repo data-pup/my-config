@@ -6,7 +6,6 @@ set showcmd
 
 " Syntax Coloring
 syntax on
-colorscheme kevi
 filetype on                     " to consider filetypes ...
 filetype plugin on              " ... and in plugins
 set directory=~/.vim/swp        " store the .swp files in a specific path

@@ -62,17 +62,10 @@ my_update() {
   npm -g update
   npm install --global npm@latest
 
-  # Update Atom packages, and upgrade versions.
-  apm update
-  apm upgrade
-
   # Update pip.
   pip install --upgrade pip
 
   # Update pip modules.
   pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
   pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
-
-  # Update vagrant plugins.
-  vagrant plugin update
 }
