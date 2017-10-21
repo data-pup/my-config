@@ -1,0 +1,22 @@
+{
+    "name": "fairyfloss",
+    "displayName": "fairyfloss",
+    "description": "Fairyfloss VS port.",
+    "version": "0.0.1",
+    "publisher": "dog",
+    "engines": {
+        "vscode": "^1.16.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "fairyfloss",
+                "uiTheme": "vs-dark",
+                "path": "./themes/fairyfloss-color-theme.json"
+            }
+        ]
+    }
+}
