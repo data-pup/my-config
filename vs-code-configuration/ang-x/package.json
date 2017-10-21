@@ -1,0 +1,22 @@
+{
+    "name": "ang-x",
+    "displayName": "ang-x",
+    "description": "Low-light theme.",
+    "version": "0.0.1",
+    "publisher": "dog",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "ang-x",
+                "uiTheme": "vs-dark",
+                "path": "./themes/ang-x-color-theme.json"
+            }
+        ]
+    }
+}

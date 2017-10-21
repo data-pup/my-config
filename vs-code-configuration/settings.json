@@ -1,0 +1,67 @@
+{
+   // Integrated Terminal Settings
+
+    // The path of the shell that the terminal uses on OS X. (Choose one.)
+    // "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+
+    // Editor
+
+    // Columns at which to show vertical rulers
+    "editor.rulers": [80, 120],
+
+    // Controls after how many characters the editor will wrap to the next line. Setting this to 0 turns on viewport width wrapping (word wrapping). Setting this to -1 forces the editor to never wrap.
+    "editor.wordWrapColumn": 120,
+
+    // Controls if lines should wrap. The lines will wrap at min(editor.wrappingColumn, viewportWidthInColumns).
+    "editor.wordWrap": "wordWrapColumn",
+
+    // Controls the indentation of wrapped lines. Can be one of 'none', 'same' or 'indent'.
+    "editor.wrappingIndent": "indent",
+
+    // Controls how the editor should render whitespace characters, posibilties are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
+    "editor.renderWhitespace": "boundary",
+
+    // Controls whether the editor should render control characters
+    "editor.renderControlCharacters": true,
+
+    // Controls whether the editor should render indent guides
+    "editor.renderIndentGuides": true,
+
+    // Controls whether the editor should render the current line highlight
+    "editor.renderLineHighlight": "gutter",
+
+    // Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
+    "workbench.editor.enablePreview": false,
+
+    // When enabled, will trim trailing whitespace when you save a file.
+    "files.trimTrailingWhitespace": true,
+
+    // Relative line numbering, because I'm saucy like that.
+    "editor.lineNumbers": "relative",
+
+    // Minimap
+
+    // Controls if the minimap is shown
+    "editor.minimap.enabled": true,
+
+    // Render the actual characters on a line (as opposed to color blocks)
+    "editor.minimap.renderCharacters": true,
+
+    // Vim Emulation Settings
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<esc>"]
+        },
+        {
+            "before": ["l", "k", "j"],
+            "after": ["<esc>"]
+        }
+    ],
+
+    // Default window zoon level.
+    "window.zoomLevel": -1,
+    "vim.disableAnnoyingNeovimMessage": true
+}
