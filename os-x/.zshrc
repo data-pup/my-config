@@ -3,9 +3,7 @@
 # with aliases/functions grouped by topic into separate scripts.
 # # # ------------------------------------------------------------------ # # #
 
-# Set readline editing options for shell quickly. Default is emacs.
-# Vi mode will use bimodal vim editing, use 'i' to work in insert mode,
-# use <ESC> to use vim navigation commands.
+# Define aliases for altering readline editing options quickly.
 alias vmode="set -o vi"
 alias emode="set -o emacs"
 
@@ -15,13 +13,6 @@ bindkey -v
 # Use vim as the default editor, if another editor is called.
 alias vi="vim"
 alias edit="vim"
-
-# Alias for lldb
-# NOTE: This is OS X Specific
-alias gdb="lldb"
-
-# Add the cargo directory for the Rust toolchain.
-export PATH="$PATH:$HOME/.cargo/bin"
 
 # # # # # Zsh Option Configurations # # # # #
 
@@ -51,21 +42,3 @@ source ~/.zshrc_components/my_networking.zsh
 source ~/.zshrc_components/my_keybindings.zsh
 source ~/.zshrc_components/my_git.zsh
 
-# This command will run update functions.
-my_update() {
-
-  # Update and upgrade Homebrew packages.
-  brew update
-  brew upgrade
-
-  # Update Node packages
-  npm -g update
-  npm install --global npm@latest
-
-  # Update pip.
-  pip install --upgrade pip
-
-  # Update pip modules.
-  pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
-  pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
-}
