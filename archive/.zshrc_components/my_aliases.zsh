@@ -84,5 +84,3 @@ alias pscpu="ps afx | sort -nr -k 3"
 alias pscpu10="ps afx | sort -nr -k 3 | head -n 10"
 alias pscpu25="ps afx | sort -nr -k 3 | head -n 25"
 
-# # # # # File maintenance aliases # # # # #
-# TODO: ... Remove DS Store
