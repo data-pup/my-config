@@ -4,6 +4,18 @@
 # Use vim keybindings.
 bindkey -v
 
+# Return to command mode with 'jj' or 'lkj'
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins 'lkj' vi-cmd-mode
+
+# This will undo the last action in command mode.
+bindkey -M vicmd 'u' undo
+
+# push-line will send you to a new prompt, and
+# restore the current prompt after completing that command.
+bindkey -M vicmd "q" push-line
+
+
 # History Configuration Settings:
 # -------------------------------
 HISTFILE=${HOME}/.zsh_history     # The location of the history file.
@@ -23,6 +35,15 @@ export PS1='___________________________________________
 %F{blue}%B[%y]:%F{pink}%B%D{%a %b %d} %D{%I:%M:%S%P}
 %U%F{magenta}%~/%b%k%f %F{pink}%}%u
 ✨  '
+
+# Git Aliases:
+# ------------
+alias gits='git status'
+alias gitss='git status --short'
+alias gitsv='git status -vv'
+alias gitsvl='git status -vv | less'
+alias gitdc='git diff --cached'
+alias gitbv='git branch -vv'
 
 
 # # # Personal Aliases (WIP)
@@ -80,4 +101,14 @@ alias psmem25="ps afx | sort -nr -k 4 | head -n 25"
 alias pscpu="ps afx | sort -nr -k 3"
 alias pscpu10="ps afx | sort -nr -k 3 | head -n 10"
 alias pscpu25="ps afx | sort -nr -k 3 | head -n 25"
+
+# # Ensure that arrow keys work as they should
+bindkey '\e[A' up-line-or-history
+bindkey '\e[B' down-line-or-history
+bindkey '\eOA' up-line-or-history
+bindkey '\eOB' down-line-or-history
+bindkey '\e[C' forward-char
+bindkey '\e[D' backward-char
+bindkey '\eOC' forward-char
+bindkey '\eOD' backward-char
 
