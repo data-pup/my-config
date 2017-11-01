@@ -3,15 +3,18 @@
 
 # Set vi mode.
 fish_vi_keybindings
+fish_vi_mode
 
 # Git aliases.
-alias gs="git status"
-alias gsv="git status -vv"
-alias gsvl="git status -vv | less"
-alias gadd="git add ."
-alias gdiff="git diff --cached"
-alias greset="git reset HEAD --"
-alias gcommit="git commit -v -a"
+alias gits="git status"
+alias gitss="git status --short"
+alias gitsv="git status -vv"
+alias gitsvl="git status -vv | less"
+alias gitbv="git branch -vv"
+alias gitadd="git add ."
+alias gitdc="git diff --cached"
+alias gitreset="git reset HEAD --"
+alias gitcommit="git commit -v -a"
 
 # Configure theme.
 set -g theme_display_user yes
