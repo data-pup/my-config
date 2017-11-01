@@ -1,0 +1,3 @@
+# Ignore fish shell history and fish session files.
+.config/fish/fish_history
+.config/fish/fishd.*
