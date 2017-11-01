@@ -79,7 +79,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Cycle through workspaces:
-bindsym $mod+Left workspace prev_on_output 
+bindsym $mod+Left workspace prev_on_output
 bindsym $mod+Right workspace next_on_output
 
 # Quick back-and-forth between 2 recently focused workspaces
@@ -151,23 +151,23 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        position bottom
+        position top
 
         colors {
-            background #0b1c2c
-            focused_workspace #8b56bf #8b56bf #fafafa
-            active_workspace #627e99 #627e99 #fafafa
-            inactive_workspace #404552 #404552 #fafafa
-            urgent_workspace #ff5757 #ff5757 #fafafa
+            background #3A374D
+            focused_workspace #FFB8D1 #FFB8D1 #F8F8F2
+            active_workspace #627e99 #627e99 #F8F8F2
+            inactive_workspace #C5A3FF #C5A3FF #F8F8F2
+            urgent_workspace #FFF352 #FFF352 #F8F8F2
         }
 }
 
 ### Styling
-client.focused #404552 #404552 #fafafa #ff5757 #666666
-client.focused_inactive #666666 #404552 #eeeeee #5294e2 #666666
-client.unfocused #404552 #484b52 #eeeeee #ff5757 #404552
-client.urgent #ff5757 #404552 #ffffff #555757 #404552
-client.background #404552
+client.focused #3A374D #3A374D #F8F8F2 #ff5757 #716799
+client.focused_inactive #716799 #3A374D #eeeeee #5294e2 #716799
+client.unfocused #3A374D #484b52 #eeeeee #ff5757 #3A374D
+client.urgent #ff5757 #3A374D #ffffff #555757 #3A374D
+client.background #3A374D
 
 ### i3-gaps integration
 for_window [window_role="pop-up"] floating enable
