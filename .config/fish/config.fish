@@ -23,8 +23,8 @@ alias gitcommit="git commit -v -a"
 # XXX: Type these commands carefully!
 # NOTE: This can potentially interfere with some
 # shell script functionality if run as source.
-alias mv='nocorrect mv -iv'
-alias cp='nocorrect cp -iv'
+alias mv='mv -iv'
+alias cp='cp -iv'
 alias ln="ln -i"
 
 # Less alias
