@@ -246,7 +246,7 @@ tmux_conf_copy_to_os_clipboard=false
 # this is the place to override or undo settings
 
 # Set the fish shell as the default shell for tmux sessions.
-set-option -g default-shell /usr/bin/fish
+# set-option -g default-shell /usr/bin/fish
 
 # increase history size
 #set -g history-limit 10000
