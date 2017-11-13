@@ -81,6 +81,7 @@ interval=10
 separator=false
 
 [bandwidth]
+color=#FFB8D1
 label=BANDWIDTH:
 #instance=eth0
 interval=5
@@ -90,12 +91,14 @@ interval=5
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
+color=#FFB8D1
 label=CPU:
 interval=10
 min_width=CPU: 100.00%
 separator=false
 
 [load_average]
+color=#FFB8D1
 label=LOAD AVG:
 interval=10
 
@@ -113,7 +116,7 @@ interval=30
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
 label=TIME:
-color=#FFB8D1
+color=#F8F8F2
 interval=5
 
 # Generic media player support
