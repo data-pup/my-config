@@ -17,6 +17,7 @@ sudo apt-get install -y \
     python3 \
     ranger \
     tmux \
+    tree \
     vim \
     zsh
 
