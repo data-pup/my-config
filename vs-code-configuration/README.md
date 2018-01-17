@@ -19,3 +19,4 @@ command.
 The settings.json file in this directory contains the main config settings.
 The other files can have their contents copy+pasted into the settings file
 as you like, to match the workbench theme to the current editor theme.
+
