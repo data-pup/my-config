@@ -4,7 +4,7 @@
 # --------------------------------------------------------------------------- #
 
 # Move to vim's autoload directory by pushing it onto the directory stack.
-pushd "~/.vim/autoload"
+pushd "${HOME}/.vim/autoload"
 
 # Download the Pathogen vim script from @tpope's Github into ~/.vim/autoload/
 wget "https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
