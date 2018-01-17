@@ -19,5 +19,6 @@ sudo apt-get install -y \
     tmux \
     tree \
     vim \
+    virtualenv \
     zsh
 
