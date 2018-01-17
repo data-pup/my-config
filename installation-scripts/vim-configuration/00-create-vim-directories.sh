@@ -10,10 +10,16 @@
 # are not created within the current working directory.
 # --------------------------------------------------------------------------- #
 
+# Create the .vim directory if it does not already exist.
+if [ ! -d ~/.vim ] ;
+then
+    mkdir --mode=700 "${HOME}/.vim/"
+fi
+
 # Create a swp file directory.
-mkdir -p ~/.vim/swp/
+mkdir --mode=700 "${HOME}/.vim/swp/"
 
 # Create Pathogen directories.
-mkdir "~/.vim/bundle"
-mkdir "~/.vim/autoload"
+mkdir --mode=700 "${HOME}/.vim/bundle/"
+mkdir --mode=700 "${HOME}/.vim/autoload"
 

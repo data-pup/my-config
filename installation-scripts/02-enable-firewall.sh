@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # --------------------------------------------------------------------------- #
-# This script enables the Uncomplicated Firewall (ufw) 
+# This script enables the Uncomplicated Firewall (ufw)
 # --------------------------------------------------------------------------- #
 
 # Enable the firewall.
