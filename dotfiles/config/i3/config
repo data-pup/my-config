@@ -39,7 +39,10 @@ bindsym $mod+i exec google-chrome
 bindsym $mod+x kill
 
 # start dmenu (a program launcher)
-bindsym $mod+m exec dmenu_run -b -i -l 5 -p "$: "
+# bindsym $mod+m exec dmenu_run -b -i -l 5 -p "$: "
+
+# Start Rofi (an alternative program launcher)
+bindsym $mod+m exec rofi -show run
 
 # change focus
 bindsym $mod+h focus left
