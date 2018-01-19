@@ -5,6 +5,19 @@
 fish_vi_keybindings
 fish_vi_mode
 
+# Git abbreviations
+if status --is-interactive
+  set -g fish_user_abbreviations
+  abbr --add ga 'git add'
+  abbr --add gb 'git branch'
+  abbr --add gcm 'git commit -m'
+  abbr --add gco 'git checkout'
+  abbr --add gr 'git remote'
+  abbr --add gs 'git status'
+  abbr --add glp 'git log -p'
+  abbr --add gl "git log --graph --decorate --pretty=oneline"
+end
+
 # Git aliases.
 alias gits="git status"
 alias gitss="git status --short"
@@ -15,6 +28,7 @@ alias gitadd="git add ."
 alias gitdc="git diff --cached"
 alias gitreset="git reset HEAD --"
 alias gitcommit="git commit -v -a"
+alias gitlog="git log --graph --decorate --pretty=oneline"
 
 # # # # # Overwrite protections # # # # #
 # These aliases will send confirmation messages
