@@ -30,6 +30,12 @@ alias gitreset="git reset HEAD --"
 alias gitcommit="git commit -v -a"
 alias gitlog="git log --graph --decorate --pretty=oneline"
 
+# Clear alias.
+alias cls="clear"
+
+# Set-Location alias, because I am intrinsically evil.
+alias sl="cd"
+
 # # # # # Overwrite protections # # # # #
 # These aliases will send confirmation messages
 # to the user before an overwrite occurs. In my Zsh profile,
