@@ -10,11 +10,13 @@ brew update
 
 # Next, install my desired packages.
 brew install \
+    curl \
     htop \
     fish \
     ipython \
     npm \
     ranger \
     tmux \
-    tree
+    tree \
+    wget
 
