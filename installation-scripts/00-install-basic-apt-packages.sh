@@ -10,15 +10,18 @@ sudo apt-get update
 
 # Next, install my desired packages.
 sudo apt-get install -y \
+    curl \
     htop \
     fish \
     git \
     ipython \
+    npm \
     python3 \
     ranger \
     tmux \
     tree \
     vim \
     virtualenv \
+    wget \
     zsh
 
