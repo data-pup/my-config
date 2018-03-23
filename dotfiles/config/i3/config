@@ -19,9 +19,10 @@ set $mod Mod4
 font pango:monofur 10
 
 ### Autolaunch
-exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
+exec --no-startup-id nm-applet            # Network monitor and control GUI.
+exec --no-startup-id xfce4-power-manager  # Power manager.
 exec --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id nitrogen --restore   # Wallpaper manager.
 
 ### Keybindings
 bindsym $mod+Shift+s exec slock # Easier locking
