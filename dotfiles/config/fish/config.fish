@@ -16,6 +16,7 @@ if status --is-interactive
   abbr --add gs 'git status'
   abbr --add glp 'git log -p'
   abbr --add gl "git log --graph --decorate --pretty=oneline"
+  abbr --add gdc "git diff --cached"
 end
 
 # Git aliases.
