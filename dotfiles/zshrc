@@ -38,6 +38,7 @@ export PS1='___________________________________________
 
 # Git Aliases:
 # ------------
+alias gs='git status'
 alias gits='git status'
 alias gitss='git status --short'
 alias gitsv='git status -vv'
@@ -64,6 +65,9 @@ alias mkdir='nocorrect mkdir'
 alias man='nocorrect man'
 
 alias my_less='less -m -N -g -i -J --line-numbers --underline-special'
+
+# Clear screen alias.
+alias cls='clear'
 
 # # # ls aliases
 alias lsa="ls -a"
