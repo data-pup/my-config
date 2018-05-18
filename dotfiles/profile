@@ -8,3 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load rbenv automatically.
 eval "$(rbenv init -)"
+
+# Add `pip --user` directory.
+export PATH="$PATH:$HOME/.local/bin"
+
