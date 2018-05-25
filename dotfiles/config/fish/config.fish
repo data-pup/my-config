@@ -9,14 +9,17 @@ fish_vi_mode
 if status --is-interactive
   set -g fish_user_abbreviations
   abbr --add ga 'git add'
+  abbr --add gaup 'git add -up'
   abbr --add gb 'git branch'
   abbr --add gcm 'git commit -m'
   abbr --add gco 'git checkout'
-  abbr --add gr 'git remote'
-  abbr --add gs 'git status'
+  abbr --add gdc "git diff --cached"
   abbr --add glp 'git log -p'
   abbr --add gl "git log --graph --decorate --pretty=oneline"
-  abbr --add gdc "git diff --cached"
+  abbr --add gpo "git push origin"
+  abbr --add gpom "git push origin master"
+  abbr --add gr 'git remote'
+  abbr --add gs 'git status'
 end
 
 # Git aliases.
