@@ -34,12 +34,12 @@ color=#C5A3FF
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
-label=VOL:
-instance=Master
+#[volume]
+#label=VOL:
+#instance=Master
 #instance=PCM
-interval=once
-signal=10
+#interval=once
+#signal=10
 
 # Memory usage
 #
@@ -52,7 +52,7 @@ interval=30
 [memory]
 label=SWAP:
 instance=swap
-separator=false
+separator=true
 interval=30
 
 # Disk usage
@@ -60,10 +60,10 @@ interval=30
 # The directory defaults to $HOME if the instance is not specified.
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
-[disk]
-label=HOME:
+#[disk]
+#label=HOME:
 #instance=/mnt/data
-interval=30
+#interval=30
 
 # Network interface monitoring
 #
@@ -149,10 +149,10 @@ interval=5
 #
 # bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 # bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#instance=CAPS
-#interval=once
-#signal=11
+[keyindicator]
+instance=CAPS
+interval=once
+signal=11
 
 #[keyindicator]
 #instance=NUM
