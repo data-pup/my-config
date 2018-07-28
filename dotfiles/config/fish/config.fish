@@ -220,10 +220,10 @@ function prompt_git -d "Display the current git state"
     set -l BG PROMPT
     set -l dirty (command git status --porcelain --ignore-submodules=dirty 2> /dev/null)
     if [ "$dirty" = "" ]
-      set BG 56FF9C
+      set BG C5A3FF
       set PROMPT "$branch"
     else
-      set BG FFF691
+      set BG FFB8D1
       set dirty ''
 
       # Check if there's any commit in the repo
