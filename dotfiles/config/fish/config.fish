@@ -286,6 +286,25 @@ function prompt_time
   prompt_segment black white (date "+%H:%M:%S")
 end
 
+function fish_mode_prompt --description 'Displays the current mode'
+    # Do nothing if not in vi mode
+    if set -q __fish_vi_mode
+        switch $fish_bind_mode
+            case default
+                set_color --bold --background C5A3FF white
+                echo '[COM]'
+            case insert
+                set_color --bold --background FFB8D1 white
+                echo '[INS]'
+            case visual
+                set_color --bold --background C5A3FF white
+                echo '[VIS]'
+        end
+        set_color normal
+        echo -n ' '
+    end
+end
+
 #
 # Prompt
 #
