@@ -43,7 +43,7 @@
     // Minimap
 
     // Controls if the minimap is shown
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
 
     // Render the actual characters on a line (as opposed to color blocks)
     "editor.minimap.renderCharacters": true,
@@ -61,7 +61,20 @@
         }
     ],
 
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["z", "x", "c"],
+            "commands": [
+                ":w"
+            ]
+        },
+    ],
+
     // Default window zoon level.
-    "window.zoomLevel": -1,
-    "vim.disableAnnoyingNeovimMessage": true
+    "window.zoomLevel": -2,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "fairyfloss",
+    "window.menuBarVisibility": "toggle",
+    "[rust]": {}
 }
