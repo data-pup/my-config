@@ -36,6 +36,10 @@ export PS1='___________________________________________
 %U%F{magenta}%~/%b%k%f %F{pink}%}%u
 ✨  '
 
+# Editor alias
+# ------------
+alias vim='nvim'
+
 # Git Aliases:
 # ------------
 alias gs='git status'
