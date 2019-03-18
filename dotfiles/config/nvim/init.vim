@@ -1,3 +1,13 @@
+" --- Plugin Configuration Settings:
+" ------------------------------
+
+" Initialize Pathogen package manager
+execute pathogen#infect()
+
+" Open NERDTree with `Ctrl+n`
+map <C-n> :NERDTreeToggle<CR>
+
+
 " --- Remappings ---
 
 "  jj to escape in insert mode
@@ -15,6 +25,14 @@ set nowrap
 
 
 " --- Display Settings ---
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Theme
+syntax enable
+colorscheme fairyfloss
 
 " Show info on the statusline.
 set laststatus=2
