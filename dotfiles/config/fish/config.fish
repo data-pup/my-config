@@ -26,6 +26,7 @@ if status --is-interactive
   abbr --add gpom "git push origin master"
   abbr --add gs 'git status'
   abbr --add gsv 'git status -vv'
+  abbr --add gfp 'git fetch -p'
 end
 
 # Git aliases.
