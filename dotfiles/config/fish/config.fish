@@ -19,11 +19,11 @@ if status --is-interactive
   abbr --add gcv 'git commit -v'
   abbr --add gco 'git checkout -b'
   abbr --add gdc "git diff --cached"
+  abbr --add gd "git diff"
   abbr --add glp 'git log -p'
-  abbr --add gl "git log --graph --decorate --pretty=oneline"
+  abbr --add gl "git log --graph --decorate --pretty=oneline --branches"
   abbr --add gpo "git push origin"
   abbr --add gpom "git push origin master"
-  abbr --add gr 'git remote'
   abbr --add gs 'git status'
   abbr --add gsv 'git status -vv'
 end
