@@ -28,6 +28,7 @@ if status --is-interactive
   abbr --add gs 'git status'
   abbr --add gsv 'git status -vv'
   abbr --add gfp 'git fetch -p'
+  abbr --add gmfo 'git merge --ff-only origin/HEAD'
 end
 
 # Git aliases.
