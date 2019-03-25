@@ -17,7 +17,8 @@ if status --is-interactive
   abbr --add gbv 'git branch -vv'
   abbr --add gcm 'git commit -m'
   abbr --add gcv 'git commit -v'
-  abbr --add gco 'git checkout -b'
+  abbr --add gco 'git checkout'
+  abbr --add gcb 'git checkout -b'
   abbr --add gdc "git diff --cached"
   abbr --add gd "git diff"
   abbr --add glp 'git log -p'
