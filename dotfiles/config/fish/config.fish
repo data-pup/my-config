@@ -23,7 +23,8 @@ if status --is-interactive
   abbr --add gd "git diff"
   abbr --add glp 'git log -p'
   abbr --add gl "git log --graph --decorate --pretty=oneline --branches"
-  abbr --add gpo "git push origin"
+  abbr --add gpo "git push origin HEAD"
+  abbr --add gpfo "git push --force-with-lease origin HEAD"
   abbr --add gpom "git push origin master"
   abbr --add gs 'git status'
   abbr --add gsv 'git status -vv'
