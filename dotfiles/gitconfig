@@ -1,0 +1,12 @@
+[user]
+	email = 16364986+data-pup@users.noreply.github.com
+	name = data-pup
+[core]
+	editor = nvim
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+	trustExitCode = true
+[mergetool]
+	trustExitCode = true
