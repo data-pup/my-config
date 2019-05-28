@@ -2,8 +2,7 @@
 # Built using this script as a starting point: https://gist.github.com/xnuk/452ae61e077f886471b5
 
 # Set vi mode.
-fish_vi_keybindings
-fish_vi_mode
+fish_vi_key_bindings
 
 # Use nvim rather than vim.
 alias vim="nvim"
@@ -164,7 +163,7 @@ function prompt_finish -d "Close open segments"
   if [ -n $current_bg ]
     set_color -b normal
     set_color $current_bg
-    echo "$segment_separator  ✨  "
+    echo "✨  "
   end
   set -g current_bg NONE
 end
@@ -297,22 +296,18 @@ function prompt_time
 end
 
 function fish_mode_prompt --description 'Displays the current mode'
-    # Do nothing if not in vi mode
-    if set -q __fish_vi_mode
-        switch $fish_bind_mode
-            case default
-                set_color --bold --background C5A3FF white
-                echo '[COM]'
-            case insert
-                set_color --bold --background FFB8D1 white
-                echo '[INS]'
-            case visual
-                set_color --bold --background C5A3FF white
-                echo '[VIS]'
-        end
-        set_color normal
-        echo -n ' '
-    end
+  switch $fish_bind_mode
+      case default
+          set_color --bold --background C5A3FF white
+          echo '[COM]'
+      case insert
+          set_color --bold --background FFB8D1 white
+          echo '[INS]'
+      case visual
+          set_color --bold --background C5A3FF white
+          echo '[VIS]'
+  end
+  set_color normal
 end
 
 #
