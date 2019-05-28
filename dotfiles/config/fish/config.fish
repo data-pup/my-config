@@ -26,6 +26,7 @@ if status --is-interactive
   abbr --add gpfo "git push --force-with-lease origin HEAD"
   abbr --add gpom "git push origin master"
   abbr --add gs 'git status'
+  abbr --add gss 'git status --short'
   abbr --add gsv 'git status -vv'
   abbr --add gfp 'git fetch -p'
   abbr --add gmfo 'git merge --ff-only origin/HEAD'
