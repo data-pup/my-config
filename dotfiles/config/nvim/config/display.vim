@@ -10,6 +10,7 @@ endif
 syntax enable
 colorscheme fairyfloss
 filetype plugin indent on
+let g:airline_theme='fairyfloss'
 
 " Line numbering settings
 set number
@@ -25,6 +26,9 @@ highlight colorcolumn ctermbg=55
 set statusline=%t%m\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%03l,%03v][%p%%]
 set statusline+=\ %=%{SyntasticStatuslineFlag()}
 set laststatus=2 " Always show the status line
+
+" Tabline
+let g:airline#extensions#tabline#enabled = 1
 
 " Show matching bracket when the cursor has selected a bracket
 set showmatch
