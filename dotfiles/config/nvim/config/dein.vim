@@ -21,6 +21,9 @@ if dein#load_state('/home/kmartin/.cache/dein')
   " Fugitive - git wrapper.
   call dein#add('tpope/vim-fugitive')
 
+  " Signify - VSC changes.
+  call dein#add('mhinz/vim-signify')
+
   " NERDTree - file explorer.
   call dein#add('scrooloose/nerdtree',
       \{'on_cmd': 'NERDTreeToggle'})
