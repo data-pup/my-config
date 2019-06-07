@@ -23,7 +23,7 @@ if dein#load_state('/home/kmartin/.config/nvim/dein')
       \{'on_cmd': 'NERDTreeToggle'})
 
   " Deoplete - asynchronous completion.
-  " call dein#add('Shougo/deoplete.nvim') " FIXME
+  call dein#add('Shougo/deoplete.nvim')
 
   " Syntastic - syntax checking.
   call dein#add('vim-syntastic/syntastic')
@@ -34,9 +34,6 @@ if dein#load_state('/home/kmartin/.config/nvim/dein')
   " Tagbar - class outline viewer.
   call dein#add('majutsushi/tagbar')
 
-  " rust.vim - rust language support.
-  " call dein#add('rust-lang/rust.vim')
-
   " End Dein initialization and save state.
   call dein#end()
   call dein#save_state()
@@ -46,4 +43,6 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+call deoplete#enable()
 
