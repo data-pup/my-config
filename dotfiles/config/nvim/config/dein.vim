@@ -18,6 +18,10 @@ if dein#load_state('/home/kmartin/.cache/dein')
 
   " --- Add plug-ins.
 
+  " Airline - statusline plugin.
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+
   " Fugitive - git wrapper.
   call dein#add('tpope/vim-fugitive')
 
