@@ -19,6 +19,7 @@ set ruler
 set nowrap
 
 " Mark the 80 char column
+set cursorline cursorcolumn
 set colorcolumn=80
 highlight colorcolumn ctermbg=55
 
