@@ -22,24 +22,24 @@ if dein#load_state('/home/kmartin/.cache/dein')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 
+  " ALE - Asynchronous Linting Engine
+  call dein#add('w0rp/ale')
+
+  " Denite - fuzzy-finding features.
+  call dein#add('Shougo/denite.nvim')
+
+  " Deoplete - asynchronous completion.
+  call dein#add('Shougo/deoplete.nvim')
+
   " Fugitive - git wrapper.
   call dein#add('tpope/vim-fugitive')
-
-  " Signify - VSC changes.
-  call dein#add('mhinz/vim-signify')
 
   " NERDTree - file explorer.
   call dein#add('scrooloose/nerdtree',
       \{'on_cmd': 'NERDTreeToggle'})
 
-  " Deoplete - asynchronous completion.
-  call dein#add('Shougo/deoplete.nvim')
-
-  " Syntastic - syntax checking.
-  call dein#add('vim-syntastic/syntastic')
-
-  " Denite - fuzzy-finding features.
-  call dein#add('Shougo/denite.nvim')
+  " Signify - VSC changes.
+  call dein#add('mhinz/vim-signify')
 
   " Tagbar - class outline viewer.
   call dein#add('majutsushi/tagbar')
@@ -53,6 +53,4 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
-call deoplete#enable()
 
