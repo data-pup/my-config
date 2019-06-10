@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Base16 - Gnome Terminal color scheme install script
 
-[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="terminal.sexy"
-[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="terminal-dot-sexy"
+[[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="fairyfloss"
+[[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="fairyfloss"
 [[ -z "$DCONF" ]] && DCONF=dconf
 [[ -z "$UUIDGEN" ]] && UUIDGEN=uuidgen
 

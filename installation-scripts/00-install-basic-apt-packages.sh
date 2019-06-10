@@ -14,14 +14,11 @@ sudo apt-get install -y \
     htop \
     fish \
     git \
-    ipython \
-    npm \
-    python3 \
     ranger \
+    silversearcher-ag \
     tmux \
     tree \
     vim \
-    virtualenv \
     wget \
     zsh
 

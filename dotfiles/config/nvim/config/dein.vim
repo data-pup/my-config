@@ -2,15 +2,15 @@
 " -----------------------------------------------------------------------------
 
 " Add Dein to the runtime path.
-set runtimepath+=/home/kmartin/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/katie/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Initialize Dein packages (only if Dein exists).
-if dein#load_state('/home/kmartin/.cache/dein')
-  call dein#begin('/home/kmartin/.cache/dein')
+if dein#load_state('/home/katie/.cache/dein')
+  call dein#begin('/home/katie/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/kmartin/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('/home/katie/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Example: add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
