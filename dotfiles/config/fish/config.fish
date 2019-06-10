@@ -189,7 +189,7 @@ function prompt_user -d "Display current user if different from $default_user"
       set USER (whoami)
       get_hostname
       if [ $HOSTNAME_PROMPT ]
-        set USER_PROMPT "$USER@$HOSTNAME_PROMPT 🐶  "
+        set USER_PROMPT "$USER@$HOSTNAME_PROMPT "
       else
         set USER_PROMPT $USER
       end
@@ -299,13 +299,13 @@ end
 function fish_mode_prompt --description 'Displays the current mode'
   switch $fish_bind_mode
       case default
-          set_color --bold --background C5A3FF white
+          set_color --bold --background C5A3FF FFFFFF
           echo '[COM]'
       case insert
-          set_color --bold --background FFB8D1 white
+          set_color --bold --background FFB8D1 FFFFFF
           echo '[INS]'
       case visual
-          set_color --bold --background C5A3FF white
+          set_color --bold --background C5A3FF FFFFFF
           echo '[VIS]'
   end
   set_color normal
