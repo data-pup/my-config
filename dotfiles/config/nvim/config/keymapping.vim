@@ -1,4 +1,4 @@
-" Remappings 
+" Remappings
 " -----------------------------------------------------------------------------
 
 " ESC shortcuts for insert mode

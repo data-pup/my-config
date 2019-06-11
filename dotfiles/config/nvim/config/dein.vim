@@ -25,6 +25,9 @@ if dein#load_state('/home/katie/.cache/dein')
   " ALE - Asynchronous Linting Engine
   call dein#add('w0rp/ale')
 
+  " Anyfold - Generic folding
+  call dein#add('pseewald/vim-anyfold')
+
   " Denite - fuzzy-finding features.
   call dein#add('Shougo/denite.nvim')
 
