@@ -17,6 +17,10 @@ vnoremap <Down> gj
 " <F2> toggles the whitelist characters
 noremap <F2> :set list!<CR>
 
+" <F7> jumps to the next error, and <F8> jumps to the next error
+nmap <silent> <F7> <Plug>(ale_previous_wrap)
+nmap <silent> <F8> <Plug>(ale_next_wrap)
+
 " Open NERDTree with `Ctrl+n`
 map <C-n> :NERDTreeToggle<CR>
 

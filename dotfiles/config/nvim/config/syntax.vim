@@ -10,6 +10,6 @@ call deoplete#custom#option('sources', {
 " Enable ALE fixers.
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'rust': ['cargo'],
+\   'rust': ['rls'],
 \}
 
