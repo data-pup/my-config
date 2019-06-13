@@ -7,9 +7,11 @@ fish_vi_key_bindings
 # Use nvim rather than vim.
 alias vim="nvim"
 
-# Git abbreviations
+# Add abbreviations to shell.
 if status --is-interactive
   set -g fish_user_abbreviations
+
+  # Git abbreviations
   abbr --add ga 'git add -p'
   abbr --add gaup 'git add -up'
   abbr --add gb 'git branch'
@@ -30,6 +32,9 @@ if status --is-interactive
   abbr --add gsv 'git status -vv'
   abbr --add gfp 'git fetch -p'
   abbr --add gmfo 'git merge --ff-only origin/HEAD'
+
+  # Watch abbreviations.
+  abbr --add watchgs 'watch -n 10 --color git -c color.status=always status --short'
 end
 
 # Git aliases.
