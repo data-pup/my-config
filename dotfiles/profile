@@ -29,6 +29,8 @@ fi
 # set PATH so it includes Cargo's bin if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
   export PATH="$HOME/.cargo/bin:$PATH"
+  # Add rustc source path for ctags.
+  export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
 fi
 
 # load nvm automatically if it exists
@@ -38,5 +40,3 @@ if [ -d "$HOME/.nvm" ] ; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
-
-export PATH="$HOME/.cargo/bin:$PATH"
