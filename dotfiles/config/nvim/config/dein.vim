@@ -28,8 +28,8 @@ if dein#load_state('/home/katie/.cache/dein')
   " Anyfold - Generic folding
   call dein#add('pseewald/vim-anyfold')
 
-  " Denite - fuzzy-finding features.
-  call dein#add('Shougo/denite.nvim')
+  " CtrlP - fuzzy path/buffer finding.
+  call dein#add('ctrlpvim/ctrlp.vim')
 
   " Deoplete - asynchronous completion.
   call dein#add('Shougo/deoplete.nvim')
