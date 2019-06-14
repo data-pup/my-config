@@ -4,9 +4,6 @@ autocmd Filetype * AnyFoldActivate
 " start with all folds closed
 set foldlevel=0
 
-" underline folds
-hi Folded term=underline
-
 " Numberic fold level commands
 nnoremap <A-1> :set foldlevel=0<CR>
 nnoremap <A-2> :set foldlevel=1<CR>

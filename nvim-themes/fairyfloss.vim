@@ -238,3 +238,6 @@ hi cssBraces guifg=NONE guibg=NONE gui=NONE
 " }}}
 
 " vim: foldenable foldmethod=marker
+
+" underline folds
+hi Folded guifg=#a8a4b1 guibg=NONE gui=underline
