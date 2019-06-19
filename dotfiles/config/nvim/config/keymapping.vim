@@ -27,3 +27,5 @@ nmap <silent> <F8> <Plug>(ale_next_wrap)
 " Open NERDTree with `Ctrl+n`
 map <C-n> :NERDTreeToggle<CR>
 
+" Get hover information with
+nmap gh :ALEHover<CR>
