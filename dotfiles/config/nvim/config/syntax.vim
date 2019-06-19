@@ -21,3 +21,6 @@ autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.
 " Open a window displaying errors if any exist.
 let g:ale_open_list = 1
 
+" Enable ALE completion.
+let g:ale_completion_enabled = 1
+let g:ale_completion_max_suggestions = 10
