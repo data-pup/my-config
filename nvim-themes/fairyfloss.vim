@@ -18,7 +18,7 @@ hi Normal guifg=#f8f8f0 guibg=#5a5475 gui=NONE
 " Text area {{{
 
 "hi Conceal
-hi ColorColumn guifg=fg guibg=#a8a4b1 gui=NONE
+hi ColorColumn guifg=NONE guibg=#716799 gui=NONE
 hi Directory guifg=#c5a3ff guibg=NONE gui=NONE
 hi MatchParen guifg=#f8f8f0 guibg=#e6c000 gui=NONE
 "hi SpecialKey
