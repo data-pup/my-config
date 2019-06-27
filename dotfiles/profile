@@ -40,3 +40,5 @@ if [ -d "$HOME/.nvm" ] ; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
+# Set LESS to provide default option flags for `less`
+export LESS="--prompt=[file\: %f][line\: %lb of %L][page\: %db of %D]?e[END]:[%Pb\%]$ --LINE-NUMBERS --HILITE-UNREAD"
