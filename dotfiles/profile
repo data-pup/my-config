@@ -41,4 +41,4 @@ if [ -d "$HOME/.nvm" ] ; then
 fi
 
 # Set LESS to provide default option flags for `less`
-export LESS="--prompt=[file\: %f][line\: %lb of %L][page\: %db of %D]?e[END]:[%Pb\%]$ --LINE-NUMBERS --HILITE-UNREAD"
+export LESS="--prompt=[file\: %f][line\: %lb of %L][page\: %db of %D]?e[END]:[%Pb\%]$ --LINE-NUMBERS --HILITE-UNREAD --RAW-CONTROL-CHARS"
