@@ -29,3 +29,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Get hover information with
 nmap gh :ALEHover<CR>
+
+" Switch buffers with PageUp and PageDown
+nnoremap <PageUp> :bprev<CR>
+nnoremap <PageDown> :bnext<CR>
