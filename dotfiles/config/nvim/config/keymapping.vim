@@ -11,8 +11,12 @@ noremap zxc :w<CR>
 " Move by visual lines
 nnoremap <Up>   gk
 vnoremap <Up>   gk
+nnoremap k      gk
+vnoremap k      gk
 nnoremap <Down> gj
 vnoremap <Down> gj
+nnoremap j      gj
+vnoremap j      gj
 
 " <F2> toggles the whitelist characters
 noremap <F2> :set list!<CR>
