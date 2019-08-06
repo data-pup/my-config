@@ -3,6 +3,7 @@
 	name = data-pup
 [core]
 	editor = nvim
+	excludesfile = /home/katie/.gitignore_global
 [diff]
 	tool = vimdiff
 [difftool]
