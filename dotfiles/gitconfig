@@ -11,3 +11,5 @@
 	trustExitCode = true
 [mergetool]
 	trustExitCode = true
+[merge]
+	conflictstyle = diff3
