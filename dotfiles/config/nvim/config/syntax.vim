@@ -17,7 +17,7 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \   'rust': [ 'rls' ],
 \}
-let g:ale_rust_rls_toolchain = 'stable' " this is needed, otherwise rls uses nightly toolchain
+let g:ale_rust_rls_toolchain = 'nightly'
 
 " Enable CTags for Rust.
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
