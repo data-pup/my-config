@@ -38,8 +38,9 @@ if status --is-interactive
   abbr --add gfp 'git fetch -p'
   abbr --add gmfo 'git merge --ff-only origin/HEAD'
 
-  # Watch abbreviations.
+  # Watch Git abbreviations.
   abbr --add watchgs 'watch -n 10 --color git -c color.status=always status --short'
+  abbr --add watchgl "watch -n 10 --color git log --graph --decorate --pretty=oneline --branches --color=always"
 end
 
 # Git aliases.
