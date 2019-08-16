@@ -33,6 +33,11 @@ if [ -d "$HOME/.cargo/bin" ] ; then
   export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
 fi
 
+# set PATH so it includes Cargo's bin if it exists
+if [ -d "$HOME/.yarn/bin" ] ; then
+  export PATH="$HOME/.yarn/bin:$PATH"
+fi
+
 # load nvm automatically if it exists
 if [ -d "$HOME/.nvm" ] ; then
   export NVM_DIR="$HOME/.nvm"
