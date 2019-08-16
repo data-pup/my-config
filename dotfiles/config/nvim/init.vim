@@ -12,4 +12,3 @@ source $HOME/.config/nvim/config/folding.vim
 source $HOME/.config/nvim/config/keymapping.vim
 source $HOME/.config/nvim/config/misc.vim
 source $HOME/.config/nvim/config/syntax.vim
-

@@ -9,7 +9,6 @@ endif
 " Set theme to fairyfloss
 syntax enable
 colorscheme fairyfloss
-filetype plugin indent on
 let g:airline_theme='fairyfloss'
 
 " Line numbering settings
