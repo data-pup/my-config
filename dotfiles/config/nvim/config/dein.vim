@@ -47,6 +47,9 @@ if dein#load_state('/home/katie/.cache/dein')
   " Tagbar - class outline viewer.
   call dein#add('majutsushi/tagbar')
 
+  " TypeScript support.
+  call dein#add('leafgarland/typescript-vim')
+
   " End Dein initialization and save state.
   call dein#end()
   call dein#save_state()
