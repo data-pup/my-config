@@ -41,6 +41,7 @@ if status --is-interactive
   # Watch Git abbreviations.
   abbr --add watchgs 'watch -n 10 --color git -c color.status=always status --short'
   abbr --add watchgl "watch -n 10 --color git log --graph --decorate --pretty=oneline --branches --color=always"
+  abbr --add watchgdc 'watch --color -n 5 git diff --cached --color=always'
 end
 
 # Git aliases.
