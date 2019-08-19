@@ -77,26 +77,32 @@ alias ln="ln -i"
 alias my_less='less -m -N -g -i -J --line-numbers --underline-special'
 
 # # # ls aliases
+
+# Use 'exa' as an 'ls' replacement
+alias ls="exa"
+
+# Shortcuts
 alias lsa="ls -a"
 alias lsl="ls -l"
 alias ls1="ls -1"
-alias lsd="ls -FlAp | grep */"    # Show directories only.
-alias lse="ls -FlA | grep \*"     # Show executables only.
 
-# Show the 10, 25 most recently modified files
-# Show the most recently modified files:
-# NOTE: lslm10 and lslm25 limit the number of
-# results to 10 and 25 results, respectively.
-alias lslm="ls -Alt"
-alias lslm10="ls -Alt | head -n 10"
-alias lslm25="ls -Alt | head -n 25"
-
-# Show the most recently accessed files:
-# NOTE: lsla10 and lsla25 limit the number of
-# results to 10 and 25 results, respectively.
-alias lsla="ls -Altu"
-alias lsla10="ls -Altu | head -n 10"
-alias lsla25="ls -Altu | head -n 25"
+### NOTE: Archived 'ls' aliases, disabling for now to see if I miss them.
+### ---------------------------------------------------------------------
+### # Show the 10, 25 most recently modified files
+### # Show the most recently modified files:
+### # NOTE: lslm10 and lslm25 limit the number of
+### # results to 10 and 25 results, respectively.
+### alias lslm="ls -Alt"
+### alias lslm10="ls -Alt | head -n 10"
+### alias lslm25="ls -Alt | head -n 25"
+###
+### # Show the most recently accessed files:
+### # NOTE: lsla10 and lsla25 limit the number of
+### # results to 10 and 25 results, respectively.
+### alias lsla="ls -Altu"
+### alias lsla10="ls -Altu | head -n 10"
+### alias lsla25="ls -Altu | head -n 25"
+### ---------------------------------------------------------------------
 
 # Process status aliases
 
