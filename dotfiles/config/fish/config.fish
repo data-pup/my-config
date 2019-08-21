@@ -19,8 +19,8 @@ if status --is-interactive
   # Git abbreviations
   abbr --add ga 'git add -p'
   abbr --add gaup 'git add -up'
-  abbr --add gb 'git branch'
-  abbr --add gbv 'git branch -vv'
+  abbr --add gb 'git --no-pager branch'
+  abbr --add gbv 'git --no-pager branch -vv'
   abbr --add gcm 'git commit -m'
   abbr --add gcv 'git commit -v'
   abbr --add gco 'git checkout'
