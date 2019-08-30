@@ -37,6 +37,10 @@ if dein#load_state('/home/katie/.cache/dein')
   " Fugitive - git wrapper.
   call dein#add('tpope/vim-fugitive')
 
+  " fzf - fuzzy finder.
+  call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+
   " NERDTree - file explorer.
   call dein#add('scrooloose/nerdtree',
       \{'on_cmd': 'NERDTreeToggle'})
