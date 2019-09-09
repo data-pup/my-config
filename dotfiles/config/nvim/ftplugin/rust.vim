@@ -1,5 +1,5 @@
-let b:ale_fixers = ['rls']
 let b:ale_linters = [ 'rls' ]
+let b:ale_fixers = ['rustfmt']
 
 " Use stable toolchain for ALE.
 let g:ale_rust_rls_toolchain = 'stable'
