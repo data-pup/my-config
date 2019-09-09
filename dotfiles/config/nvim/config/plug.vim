@@ -10,9 +10,6 @@ Plug 'w0rp/ale'
 " Anyfold - Generic folding
 Plug 'pseewald/vim-anyfold'
 
-" CtrlP - fuzzy path/buffer finding.
-Plug 'ctrlpvim/ctrlp.vim'
-
 " Deoplete - asynchronous completion.
 Plug 'Shougo/deoplete.nvim'
 
