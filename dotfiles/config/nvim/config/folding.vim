@@ -15,4 +15,3 @@ nnoremap <A-7> :set foldlevel=6<CR>
 nnoremap <A-8> :set foldlevel=7<CR>
 nnoremap <A-9> :set foldlevel=8<CR>
 nnoremap <A-0> :set foldlevel=99<CR>
-

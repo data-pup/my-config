@@ -24,6 +24,9 @@ set colorcolumn=73,81,121
 " Always show the status line
 set laststatus=2
 
+" Try to keep 2 lines above/below the current line in view for context.
+set scrolloff=5
+
 " Tabline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -33,4 +36,3 @@ set showmatch
 " Flag problematic whitespace (trailing spaces, spaces before tabs).
 highlight BadWhitespace term=standout ctermbg=red guibg=red
 match BadWhitespace /[^* \t]\zs\s\+$\| \+\ze\t/
-

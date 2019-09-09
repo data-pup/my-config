@@ -18,6 +18,19 @@ vnoremap <Down> gj
 nnoremap j      gj
 vnoremap j      gj
 
+" Open NERDTree with `Ctrl+n`
+map <C-n> :NERDTreeToggle<CR>
+
+" Remap `Ctrl+p` to the 'Gfp' command defined in `fzf.vim`
+map <C-p> :Gfp<CR>
+
+" Get hover information with `gh`
+nmap gh :ALEHover<CR>
+
+" Switch buffers with PageUp and PageDown
+nnoremap <PageUp> :bprev<CR>
+nnoremap <PageDown> :bnext<CR>
+
 " <F2> toggles the whitelist characters
 noremap <F2> :set list!<CR>
 
@@ -31,13 +44,3 @@ nmap <silent> <F8> <Plug>(ale_next_wrap)
 " <F10> finds references, and <F12> jumps to the definition of a symbol.
 nmap <silent> <F10> <Plug>(ale_find_references)
 nmap <silent> <F12> <Plug>(ale_go_to_definition)
-
-" Open NERDTree with `Ctrl+n`
-map <C-n> :NERDTreeToggle<CR>
-
-" Get hover information with `gh`
-nmap gh :ALEHover<CR>
-
-" Switch buffers with PageUp and PageDown
-nnoremap <PageUp> :bprev<CR>
-nnoremap <PageDown> :bnext<CR>
