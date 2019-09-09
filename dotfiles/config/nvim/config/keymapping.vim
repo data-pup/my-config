@@ -28,10 +28,14 @@ nmap <F4> :TagbarToggle<CR>
 nmap <silent> <F7> <Plug>(ale_previous_wrap)
 nmap <silent> <F8> <Plug>(ale_next_wrap)
 
+" <F10> finds references, and <F12> jumps to the definition of a symbol.
+nmap <silent> <F10> <Plug>(ale_find_references)
+nmap <silent> <F12> <Plug>(ale_go_to_definition)
+
 " Open NERDTree with `Ctrl+n`
 map <C-n> :NERDTreeToggle<CR>
 
-" Get hover information with
+" Get hover information with `gh`
 nmap gh :ALEHover<CR>
 
 " Switch buffers with PageUp and PageDown
