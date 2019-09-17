@@ -20,8 +20,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" NERDCommenter - quickly comment lines
+Plug 'scrooloose/nerdcommenter'
+
 " NERDTree - file explorer.
 Plug 'scrooloose/nerdtree'
+
+" over.vim - substitution preview.
+Plug 'osyo-manga/vim-over'
 
 " Signify - VSC changes.
 Plug 'mhinz/vim-signify'
