@@ -44,7 +44,7 @@ nmap <Leader>c <plug>NERDCommenterToggle
 nnoremap <C-p> :Gfp<CR>
 
 " Get hover information with `gh`
-nmap gh :ALEHover<CR>
+nmap gh <Plug>(ale_hover)
 
 " Switch buffers with PageUp and PageDown
 nnoremap <PageUp> :bprev<CR>
