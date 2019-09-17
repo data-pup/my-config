@@ -35,7 +35,7 @@ nnoremap j      gj
 vnoremap j      gj
 
 " Open NERDTree with `Ctrl+n`
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Toggle *commenting with Leader+c
 nmap <Leader>c <plug>NERDCommenterToggle
