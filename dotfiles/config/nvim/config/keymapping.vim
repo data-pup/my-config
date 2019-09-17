@@ -37,6 +37,9 @@ vnoremap j      gj
 " Open NERDTree with `Ctrl+n`
 map <C-n> :NERDTreeToggle<CR>
 
+" Toggle *commenting with Leader+c
+nmap <Leader>c <plug>NERDCommenterToggle
+
 " Remap `Ctrl+p` to the 'Gfp' command defined in `fzf.vim`
 nnoremap <C-p> :Gfp<CR>
 
