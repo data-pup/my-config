@@ -32,6 +32,12 @@ vnoremap <Down> gj
 nnoremap j      gj
 vnoremap j      gj
 
+" Easier split pane navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Open NERDTree with `Ctrl+n`
 nnoremap <C-n> :NERDTreeToggle<CR>
 
