@@ -1,13 +1,11 @@
 " Remappings
 " -----------------------------------------------------------------------------
 
-" map space to :
-noremap <space> :
-" disable :
-noremap : <NOP>
+" Use space as a leader key
+let mapleader=" "
 
-" Use comma as a leader key
-let mapleader=","
+" Use double space for command
+noremap <Leader><space> :
 
 " Disable ex mode
 nnoremap Q <nop>
@@ -46,9 +44,15 @@ nnoremap <C-p> :Gfp<CR>
 " Get hover information with `gh`
 nmap gh <Plug>(ale_hover)
 
-" Switch buffers with PageUp and PageDown
-nnoremap <PageUp> :bprev<CR>
-nnoremap <PageDown> :bnext<CR>
+" Switch buffers with PageUp and PageDown, or Leader-j and Leader,k
+nnoremap <pageup> :bprev<cr>
+nnoremap <pagedown> :bnext<cr>
+nnoremap <Leader>j :bprev<cr>
+nnoremap <Leader>k :bnext<cr>
+
+" Switch tabs with Leader-h, and Leader-l
+nnoremap <Leader>h :tabprev<CR>
+nnoremap <Leader>l :tabnext<CR>
 
 " <F1> toggles relative line numbering
 function! NumberToggle()

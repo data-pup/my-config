@@ -325,3 +325,6 @@ end
 function md --description 'convert a markdown file to html and read with lynx'
     pandoc $argv[1] | lynx -stdin
 end
+
+### Misc.
+set -g -x REVIEW_BASE 'master'
