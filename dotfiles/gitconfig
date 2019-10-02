@@ -13,7 +13,14 @@
 	trustExitCode = true
 [merge]
 	conflictstyle = diff3
+[rebase]
+	stat = true
+	autoSquash = true
+	missingCommitsCheck = error
 [alias]
+	# Open a new vim instance with a fugitive window open.
+	fugitive = !vim -c "G" +\"tabdo NERDTreeToggle\"
+
 	# List files which have changed since REVIEW_BASE.
 	# (REVIEW_BASE defaults to 'master')
 	files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
@@ -30,3 +37,6 @@
 	# instead of opening all files:
 	# git reviewone foo.js bar.js
 	reviewone = !vim -p +\"tabdo Gvdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
+	# Interatively rebase the commits on this branch since the merge base.
+	rebase-branch = !git rebase --interactive $(git merge-base HEAD \"$REVIEW_BASE\")
