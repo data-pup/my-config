@@ -25,8 +25,11 @@
 	# (REVIEW_BASE defaults to 'master')
 	files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
 
-	# Same as `files`, but with a diff stat instead of just names.
-	stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
+	# Show stats for commits unique to this branch since the merge base.
+	log-stat = !git log --decorate --pretty=oneline --stat $REVIEW_BASE..HEAD
+
+	# Interatively rebase the commits on this branch since the merge base.
+	rebase-branch = !git rebase --interactive $(git merge-base HEAD \"$REVIEW_BASE\")
 
 	# Open all files changed since REVIEW_BASE in Vim tabs
 	# Then, run fugitive's :Gdiff in each tab, and finally
@@ -38,5 +41,5 @@
 	# git reviewone foo.js bar.js
 	reviewone = !vim -p +\"tabdo Gvdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
 
-	# Interatively rebase the commits on this branch since the merge base.
-	rebase-branch = !git rebase --interactive $(git merge-base HEAD \"$REVIEW_BASE\")
+	# Same as `files`, but with a diff stat instead of just names.
+	stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")

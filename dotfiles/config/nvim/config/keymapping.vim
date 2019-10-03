@@ -14,9 +14,13 @@ nnoremap Q <nop>
 inoremap jj <Esc>
 inoremap lkj <Esc>
 
-" Save file with 'zxc' or 'Ctrl+s'
+" Save file with 'zxc' or 'Ctrl+s' or
 noremap zxc :w<CR>
 noremap <C-s> :w<CR>
+
+" Save file with Leader+ww, or save all files Leader+wa
+noremap <Leader>ww :w<CR>
+noremap <Leader>wa :wa<CR>
 
 " visual search with vim-over with Leader+fr
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
