@@ -56,9 +56,9 @@ nmap gh <Plug>(ale_hover)
 
 " Switch buffers with PageUp and PageDown, or Leader-j and Leader,k
 nnoremap <pageup> :bprev<cr>
+nnoremap <Leader>k :bprev<cr>
 nnoremap <pagedown> :bnext<cr>
-nnoremap <Leader>j :bprev<cr>
-nnoremap <Leader>k :bnext<cr>
+nnoremap <Leader>j :bnext<cr>
 
 " Switch tabs with Leader-h, and Leader-l
 nnoremap <Leader>h :tabprev<CR>
