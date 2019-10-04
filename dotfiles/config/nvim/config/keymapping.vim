@@ -64,6 +64,10 @@ nnoremap <Leader>k :bnext<cr>
 nnoremap <Leader>h :tabprev<CR>
 nnoremap <Leader>l :tabnext<CR>
 
+" Ranger keybindings Leader-rr for current window, Leader-rt for new tab.
+map <leader>rr :Ranger<CR>.
+map <leader>rt :RangerNewTab<CR>.
+
 " <F1> toggles relative line numbering
 function! NumberToggle()
   if(&relativenumber == 1)

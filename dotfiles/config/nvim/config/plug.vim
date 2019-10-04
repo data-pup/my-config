@@ -29,6 +29,10 @@ Plug 'scrooloose/nerdtree'
 " over.vim - substitution preview.
 Plug 'osyo-manga/vim-over'
 
+" ranger.vim - ranger/nvim integration.
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 " Signify - VSC changes.
 Plug 'mhinz/vim-signify'
 
