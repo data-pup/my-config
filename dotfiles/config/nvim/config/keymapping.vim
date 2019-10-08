@@ -14,13 +14,19 @@ nnoremap Q <nop>
 inoremap jj <Esc>
 inoremap lkj <Esc>
 
-" Save file with 'zxc' or 'Ctrl+s' or
+" Save file with 'zxc' or 'Ctrl+s'
 noremap zxc :w<CR>
 noremap <C-s> :w<CR>
 
-" Save file with Leader+ww, or save all files Leader+wa
+" Save file with Leader+ww, save all files with Leader+wa, or save
+" and close buffer with Leader+wq
 noremap <Leader>ww :w<CR>
 noremap <Leader>wa :wa<CR>
+noremap <Leader>wq :wq<CR>
+
+" Close file with Leader+qq, or close all buffers with Leader+qa
+noremap <Leader>qq :q<CR>
+noremap <Leader>qa :qa<CR>
 
 " visual search with vim-over with Leader+fr
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
