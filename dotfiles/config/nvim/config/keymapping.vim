@@ -81,8 +81,12 @@ nnoremap <Leader>h :tabprev<CR>
 nnoremap <Leader>l :tabnext<CR>
 
 " Ranger keybindings Leader-rr for current window, Leader-rt for new tab.
+" Leader+rss and Leader+rvs for opening in a split, and for opening in a
+" vertical split, respectively.
 map <leader>rr :Ranger<CR>.
 map <leader>rt :RangerNewTab<CR>.
+map <leader>rss :sp<CR>:Ranger<CR>.
+map <leader>rvs :vs<CR>:Ranger<CR>.
 
 " <F1> toggles relative line numbering
 function! NumberToggle()
