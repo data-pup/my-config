@@ -28,6 +28,9 @@ noremap <Leader>wq :wq<CR>
 noremap <Leader>qq :q<CR>
 noremap <Leader>qa :qa<CR>
 
+" Force reload file with Leader+e
+noremap <Leader>ee :e!<CR>
+
 " Open current buffer in a new tab with Leader+bt
 " Split current buffer with Leader+bs
 " Vertically split current buffer with Leader+bv
