@@ -28,6 +28,13 @@ noremap <Leader>wq :wq<CR>
 noremap <Leader>qq :q<CR>
 noremap <Leader>qa :qa<CR>
 
+" Open current buffer in a new tab with Leader+bt
+" Split current buffer with Leader+bs
+" Vertically split current buffer with Leader+bv
+noremap <Leader>bt :tab sb<CR>
+noremap <Leader>bs :sp<CR>
+noremap <Leader>bv :vs<CR>
+
 " visual search with vim-over with Leader+fr
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
 xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
