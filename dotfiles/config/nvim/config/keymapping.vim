@@ -80,6 +80,12 @@ nnoremap <Leader>j :bnext<cr>
 nnoremap <Leader>h :tabprev<CR>
 nnoremap <Leader>l :tabnext<CR>
 
+" Resize buffers with `+[hjkl]
+nnoremap `h :vertical resize +5<CR>
+nnoremap `j :resize +5<CR>
+nnoremap `k :resize -5<CR>
+nnoremap `l :vertical resize -5<CR>
+
 " Ranger keybindings Leader-rr for current window, Leader-rt for new tab.
 " Leader+rss and Leader+rvs for opening in a split, and for opening in a
 " vertical split, respectively.
@@ -104,6 +110,9 @@ noremap <F2> :set list!<CR>
 
 " <F4> toggles the tagbar window.
 nmap <F4> :TagbarToggle<CR>
+
+" Leader-;rn to rename a symbol
+map <leader>;rn :ALERename<CR>
 
 " <F7> jumps to the next error, and <F8> jumps to the next error
 nmap <silent> <F7> <Plug>(ale_previous_wrap)
