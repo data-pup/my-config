@@ -96,6 +96,11 @@ map <leader>rt :RangerNewTab<CR>.
 map <leader>rss :sp<CR>:Ranger<CR>.
 map <leader>rvs :vs<CR>:Ranger<CR>.
 
+" Use Leader+// to toggle highlight.
+" Use Leader+/w to highlight the current word.
+map <leader>// :set hlsearch! hlsearch?<CR>
+map <leader>/w :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+
 " <F1> toggles relative line numbering
 function! NumberToggle()
   if(&relativenumber == 1)
