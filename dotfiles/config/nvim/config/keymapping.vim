@@ -34,9 +34,11 @@ noremap <Leader>ee :e!<CR>
 " Open current buffer in a new tab with Leader+bt
 " Split current buffer with Leader+bs
 " Vertically split current buffer with Leader+bv
+" List buffers with Leader+bl
 noremap <Leader>bt :tab sb<CR>
 noremap <Leader>bs :sp<CR>
 noremap <Leader>bv :vs<CR>
+noremap <Leader>bl :ls<CR>
 
 " visual search with vim-over with Leader+fr
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
