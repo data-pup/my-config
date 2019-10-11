@@ -118,8 +118,13 @@ noremap <F2> :set list!<CR>
 " <F4> toggles the tagbar window.
 nmap <F4> :TagbarToggle<CR>
 
-" Leader-;rn to rename a symbol
+" ALE shortcuts.
 map <leader>;rn :ALERename<CR>
+map <leader>;fr <Plug>(ale_find_references)
+map <leader>;gdv <Plug>(ale_go_to_definition_in_vsplit)
+map <leader>;gdd <Plug>(ale_go_to_definition)
+map <leader>;j <Plug>(ale_next_wrap)
+map <leader>;k <Plug>(ale_previous_wrap)
 
 " <F7> jumps to the next error, and <F8> jumps to the next error
 nmap <silent> <F7> <Plug>(ale_previous_wrap)
