@@ -119,12 +119,18 @@ noremap <F2> :set list!<CR>
 nmap <F4> :TagbarToggle<CR>
 
 " ALE shortcuts.
+map <leader>;; <Plug>(ale_next_wrap)
 map <leader>;rn :ALERename<CR>
 map <leader>;fr <Plug>(ale_find_references)
+map <leader>;gdt <Plug>(ale_go_to_definition_in_tab)
 map <leader>;gdv <Plug>(ale_go_to_definition_in_vsplit)
 map <leader>;gdd <Plug>(ale_go_to_definition)
 map <leader>;j <Plug>(ale_next_wrap)
 map <leader>;k <Plug>(ale_previous_wrap)
+
+" Open and close loclist.
+map <leader>;] :lclose<CR>
+map <leader>;[ :lopen<CR>
 
 " <F7> jumps to the next error, and <F8> jumps to the next error
 nmap <silent> <F7> <Plug>(ale_previous_wrap)
