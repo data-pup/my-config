@@ -4,9 +4,6 @@
 " Use space as a leader key
 let mapleader=" "
 
-" Use double space for command
-noremap <Leader><space> :
-
 " Register space as the leader key with which-key.
 call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
@@ -28,6 +25,8 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map =  {}
 
 " Open command prompt with Leader-Leader.
+" Use double space for command
+nnoremap <Leader><space> :
 let g:which_key_map[' '] = 'open command prompt'
 
 " Switch tabs with Leader-h, and Leader-l
@@ -70,6 +69,27 @@ let g:which_key_map.b = {
       \ 'l' : [':ls', 'list open buffers'],
       \ }
 
+" ALE shortcuts.
+let g:which_key_map[';'] = {
+      \ 'name' : 'IDE nonsense' ,
+      \ ';' : ['<Plug>(ale_next_wrap)', 'next error'],
+      \ '[' : [':lopen', 'open location list'],
+      \ ']' : [':lclose', 'close location list'],
+      \ 'j' : ['<Plug>(ale_next_wrap)', 'next error'],
+      \ 'k' : ['<Plug>(ale_previous_wrap)', 'previous error'],
+      \ 'r' : [':ALERename', 'rename symbol'],
+      \ 'g' : {
+        \ 'name' : 'go to',
+        \ 'd' : ['<Plug>(ale_go_to_definition)', 'definition'],
+        \ 't' : ['<Plug>(ale_go_to_definition_in_tab)', 'definition in tab'],
+        \ 'v' : ['<Plug>(ale_go_to_definition_in_vsplit)', 'definition in vertical split'],
+        \ },
+      \ 'f' : {
+        \ 'name' : 'find',
+        \ 'r' : ['<Plug>(ale_find_references)', 'references'],
+        \ }
+      \ }
+
 " TODO:
 " ----------------------------------------------------------------------
 
@@ -92,20 +112,6 @@ map <leader>rvs :vs<CR>:Ranger<CR>.
 " Use Leader+/w to highlight the current word.
 map <leader>// :set hlsearch! hlsearch?<CR>
 map <leader>/w :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
-
-" ALE shortcuts.
-map <leader>;; <Plug>(ale_next_wrap)
-map <leader>;rn :ALERename<CR>
-map <leader>;fr <Plug>(ale_find_references)
-map <leader>;gdt <Plug>(ale_go_to_definition_in_tab)
-map <leader>;gdv <Plug>(ale_go_to_definition_in_vsplit)
-map <leader>;gdd <Plug>(ale_go_to_definition)
-map <leader>;j <Plug>(ale_next_wrap)
-map <leader>;k <Plug>(ale_previous_wrap)
-
-" Open and close loclist.
-map <leader>;] :lclose<CR>
-map <leader>;[ :lopen<CR>
 
 " Toggle *commenting with Leader+c
 nmap <Leader>c <plug>NERDCommenterToggle
