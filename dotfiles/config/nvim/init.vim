@@ -18,3 +18,7 @@ source $HOME/.config/nvim/config/keymapping.vim
 source $HOME/.config/nvim/config/folding.vim
 " Leader key bindings
 source $HOME/.config/nvim/config/leader.vim
+" Better o/O Behavior
+source $HOME/.config/nvim/config/better_o.vim
+" Autosave
+source $HOME/.config/nvim/config/autosave.vim
