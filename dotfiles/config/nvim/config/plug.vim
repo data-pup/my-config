@@ -42,4 +42,7 @@ Plug 'majutsushi/tagbar'
 " TypeScript support.
 Plug 'leafgarland/typescript-vim'
 
+" Which Key - show keybindings in popup.
+Plug 'liuchengxu/vim-which-key'
+
 call plug#end()

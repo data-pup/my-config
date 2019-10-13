@@ -16,3 +16,5 @@ source $HOME/.config/nvim/config/fzf.vim
 source $HOME/.config/nvim/config/keymapping.vim
 " Folding shortcuts (alt+n to fold at level n)
 source $HOME/.config/nvim/config/folding.vim
+" Leader key bindings
+source $HOME/.config/nvim/config/leader.vim
