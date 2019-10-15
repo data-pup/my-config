@@ -17,7 +17,6 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
-
 " Which Key Bindings: Bind leader keys, registering with which-key.
 " -----------------------------------------------------------------
 
@@ -90,6 +89,21 @@ let g:which_key_map[';'] = {
         \ }
       \ }
 
+" Register ranger mappings. Because these involve strings of commands,
+" we register the names of the mappings separately from the mappings
+" themselves.
+let g:which_key_map.r = {
+      \ 'name' : 'ranger' ,
+      \ 'r' : 'open ranger',
+      \ 's' : 'open ranger in horizontal split',
+      \ 't' : 'open ranger in tab',
+      \ 'v' : 'open ranger in vertical split',
+      \ }
+map <leader>rr :Ranger<CR>.
+map <leader>rt :RangerNewTab<CR>.
+map <leader>rs :sp<CR>:Ranger<CR>.
+map <leader>rv :vs<CR>:Ranger<CR>.
+
 " TODO:
 " ----------------------------------------------------------------------
 
@@ -99,14 +113,6 @@ noremap <Leader>ee :e!<CR>
 " visual search with vim-over with Leader+fr
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
 xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
-
-" Ranger keybindings Leader-rr for current window, Leader-rt for new tab.
-" Leader+rss and Leader+rvs for opening in a split, and for opening in a
-" vertical split, respectively.
-map <leader>rr :Ranger<CR>.
-map <leader>rt :RangerNewTab<CR>.
-map <leader>rss :sp<CR>:Ranger<CR>.
-map <leader>rvs :vs<CR>:Ranger<CR>.
 
 " Use Leader+// to toggle highlight.
 " Use Leader+/w to highlight the current word.
