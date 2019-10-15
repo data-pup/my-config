@@ -19,7 +19,10 @@
 	missingCommitsCheck = error
 [alias]
 	# Open a new vim instance with a fugitive window open.
-	fugitive = !vim -c "G" +\"tabdo NERDTreeToggle\"
+	fugitive-status = !vim -c "G" +\"tabdo NERDTreeToggle\"
+
+	# Open a new vim instance showing the git log, using fugitive.
+	fugitive-log = !vim -c "Glog"
 
 	# List files which have changed since REVIEW_BASE.
 	# (REVIEW_BASE defaults to 'master')
