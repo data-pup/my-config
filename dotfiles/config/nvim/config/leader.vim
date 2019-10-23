@@ -40,35 +40,42 @@ let g:which_key_map.k = 'previous buffer'
 nnoremap <Leader>j :bnext<cr>
 let g:which_key_map.j = 'next buffer'
 
-" Writing buffers.
+" Write buffer mappings.
 let g:which_key_map.w = {
       \ 'name' : 'save buffers' ,
-      \ 'w' : [':w', 'save current buffer'] ,
       \ 'a' : [':wa', 'save all open buffers'] ,
+      \ 'w' : [':w', 'save current buffer'] ,
       \ 'q' : [':wq', 'save and quit buffer'] ,
       \ }
 
-" Close file with Leader+qq, or close all buffers with Leader+qa
+" Close buffer mappings.
 let g:which_key_map.q = {
       \ 'name' : 'close buffers' ,
-      \ 'q' : [':q', 'close current buffer'],
       \ 'a' : [':qa', 'close all buffers'],
       \ 'f' : [':q!', 'close current buffer w/o saving'],
+      \ 'q' : [':q', 'close current buffer'],
       \ }
 
-" Open current buffer in a new tab with Leader+bt
-" Split current buffer with Leader+bs
-" Vertically split current buffer with Leader+bv
-" List buffers with Leader+bl
+" General buffer management mappings.
 let g:which_key_map.b = {
       \ 'name' : 'buffer management' ,
-      \ 't' : [':tab sb', 'open buffer in new tab'],
-      \ 's' : [':sp', 'horizontally split buffer'],
-      \ 'v' : [':vs', 'vertically split buffer'],
       \ 'l' : [':ls', 'list open buffers'],
+      \ 's' : [':sp', 'horizontally split buffer'],
+      \ 't' : [':tab sb', 'open buffer in new tab'],
+      \ 'v' : [':vs', 'vertically split buffer'],
       \ }
 
-" ALE shortcuts.
+" Tab management mappings.
+let g:which_key_map.t = {
+      \ 'name' : 'tab management' ,
+      \ 'f' : [':tabmove 0', 'move tab to first position'],
+      \ 'l' : [':tabmove', 'move tab to last position'],
+      \ 'n' : [':tabmove +1', 'move tab right one position'],
+      \ 'p' : [':tabmove -1', 'move tab left one position'],
+      \ 'q' : [':tabclose', 'close tab'],
+      \ }
+
+" Language support mappings via ALE.
 let g:which_key_map[';'] = {
       \ 'name' : 'IDE nonsense' ,
       \ ';' : ['<Plug>(ale_next_wrap)', 'next error'],
