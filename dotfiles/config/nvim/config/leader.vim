@@ -84,6 +84,7 @@ let g:which_key_map[';'] = {
       \ 'j' : ['<Plug>(ale_next_wrap)', 'next error'],
       \ 'k' : ['<Plug>(ale_previous_wrap)', 'previous error'],
       \ 'r' : [':ALERename', 'rename symbol'],
+      \ 'd' : ['<Plug>(ale_detail)', 'error detail'],
       \ 'g' : {
         \ 'name' : 'go to',
         \ 'd' : ['<Plug>(ale_go_to_definition)', 'definition'],
