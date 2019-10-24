@@ -68,10 +68,11 @@ let g:which_key_map.b = {
 " Tab management mappings.
 let g:which_key_map.t = {
       \ 'name' : 'tab management' ,
-      \ 'f' : [':tabmove 0', 'move tab to first position'],
+      \ 'h' : [':tabmove 0', 'move tab to first position'],
+      \ 'j' : [':tabmove -1', 'move tab left one position'],
+      \ 'k' : [':tabmove +1', 'move tab right one position'],
       \ 'l' : [':tabmove', 'move tab to last position'],
-      \ 'n' : [':tabmove +1', 'move tab right one position'],
-      \ 'p' : [':tabmove -1', 'move tab left one position'],
+      \ 't' : [':tabs', 'list open tabs'],
       \ 'q' : [':tabclose', 'close tab'],
       \ }
 
