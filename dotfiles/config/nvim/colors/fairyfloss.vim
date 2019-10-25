@@ -69,10 +69,10 @@ hi CursorLineNr guifg=#c5a3ff guibg=#716799 gui=bold " fg is not defined on the 
 
 " Diff {{{
 
-hi DiffAdd guifg=bg guibg=#c2ffdf gui=NONE
-hi DiffChange guifg=#f92672 guibg=#f8f8f0 gui=NONE
-hi DiffDelete guifg=#f92672 guibg=bg gui=NONE
-hi DiffText guifg=#f8f8f0 guibg=#f92672 gui=NONE
+hi DiffAdd guifg=NONE guibg=#5b8565 gui=NONE
+hi DiffChange guifg=NONE guibg=#5e828c gui=NONE
+hi DiffDelete guifg=NONE guibg=#8c5e7e gui=NONE
+hi DiffText guifg=NONE guibg=#5e828c gui=inverse
 
 " }}}
 
