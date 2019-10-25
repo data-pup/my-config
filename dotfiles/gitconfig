@@ -37,12 +37,26 @@
 	# Open all files changed since REVIEW_BASE in Vim tabs
 	# Then, run fugitive's :Gdiff in each tab, and finally
 	# tell vim-gitgutter to show +/- for changes since REVIEW_BASE
-	review = !vim -p $(git files) +\"tabdo Gvdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+	# NOTE: This uses vertical diff splits
+	review-vdiff = !vim -p $(git files) +\"tabdo Gvdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
+	# Open all files changed since REVIEW_BASE in Vim tabs
+	# Then, run fugitive's :Gdiff in each tab, and finally
+	# tell vim-gitgutter to show +/- for changes since REVIEW_BASE
+	# NOTE: This uses horizontal diff splits
+	review-diff = !vim -p $(git files) +\"tabdo Gdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
 
 	# Same as the above, except specify names of files as arguments,
 	# instead of opening all files:
 	# git reviewone foo.js bar.js
-	reviewone = !vim -p +\"tabdo Gvdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+	# NOTE: This uses vertical diff splits
+	review-one-vdiff = !vim -p +\"tabdo Gvdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
+	# Same as the above, except specify names of files as arguments,
+	# instead of opening all files:
+	# git reviewone foo.js bar.js
+	# NOTE: This uses horizontal diff splits
+	review-one-diff = !vim -p +\"tabdo Gdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
 
 	# Same as `files`, but with a diff stat instead of just names.
 	stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
