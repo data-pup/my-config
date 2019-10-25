@@ -28,7 +28,7 @@ hi MatchParen guifg=#f8f8f0 guibg=#e6c000 gui=NONE
 
 " Side columns {{{
 
-hi LineNr guifg=#a8a4b1 guibg=NONE gui=NONE " fg is not defined on the original theme. It was taken using Digital Color Meter
+hi LineNr guifg=#a8a4b1 guibg=NONE gui=italic " fg is not defined on the original theme. It was taken using Digital Color Meter
 hi link LineNr EndOfBuffer
 hi NonText guifg=#a8a4b1 guibg=NONE gui=NONE " fg is not defined on the original theme. It was taken using Digital Color Meter
 hi SignColumn guifg=#a8a4b1 guibg=NONE gui=NONE
@@ -50,8 +50,8 @@ hi WarningMsg guifg=#f8f8f0 guibg=#f92672 gui=NONE
 
 " Completion {{{
 
-hi Pmenu guifg=fg guibg=#ff857f gui=NONE
-hi PmenuSel guifg=fg guibg=#ae81ff gui=NONE
+hi Pmenu guifg=fg guibg=#ae81ff gui=NONE
+hi PmenuSel guifg=fg guibg=#ffb8d1 gui=bold
 "hi PmenuSbar
 "hi PmenuThumb
 
@@ -63,7 +63,7 @@ hi PmenuSel guifg=fg guibg=#ae81ff gui=NONE
 "hi CursorIM
 hi CursorColumn guifg=NONE guibg=#716799 gui=NONE
 hi! link CursorLine CursorColumn
-hi CursorLineNr guifg=#a8a4b1 guibg=#716799 gui=bold " fg is not defined on the original theme. It was taken using Digital Color Meter
+hi CursorLineNr guifg=#c5a3ff guibg=#716799 gui=bold " fg is not defined on the original theme. It was taken using Digital Color Meter
 
 " }}}
 
@@ -79,7 +79,8 @@ hi DiffText guifg=#f8f8f0 guibg=#f92672 gui=NONE
 " Folds {{{
 
 "hi FoldColumn
-hi Folded guifg=#8076aa guibg=NONE gui=NONE
+" underline folds
+hi Folded guifg=#a8a4b1 guibg=NONE gui=underline
 
 " }}}
 
@@ -137,7 +138,7 @@ hi TabLineSel guifg=#a8a4b1 guibg=bg gui=NONE
 
 " Text {{{
 
-hi Comment guifg=#e6c000 guibg=NONE gui=NONE
+hi Comment guifg=#e6c000 guibg=NONE gui=italic
 
 hi Constant guifg=#c5a3ff guibg=NONE gui=NONE
 hi String guifg=#ffea00 guibg=NONE gui=NONE
@@ -146,15 +147,15 @@ hi Number guifg=#c5a3ff guibg=NONE gui=NONE
 hi Boolean guifg=#c5a3ff guibg=NONE gui=NONE
 hi Float guifg=#c5a3ff guibg=NONE gui=NONE
 
-hi Identifier guifg=#c2ffdf guibg=NONE gui=italic
+hi Identifier guifg=#c2ffdf guibg=NONE gui=bold
 hi Function guifg=#fff352 guibg=NONE gui=NONE
 
-hi Statement guifg=#ffb8d1 guibg=NONE gui=NONE
-hi Conditional guifg=#ffb8d1 guibg=NONE gui=NONE
-"hi Repeat
-hi Label guifg=#ffea00 guibg=NONE gui=NONE
+hi Statement guifg=#ffb8d1 guibg=NONE gui=italic
+hi Conditional guifg=#ffb8d1 guibg=NONE gui=italic
+hi Repeat guifg=#ffb8d1 guibg=NONE gui=italic
+hi Label guifg=#ffea00 guibg=NONE gui=italic
 hi Operator guifg=#ffb8d1 guibg=NONE gui=NONE
-hi Keyword guifg=#ffb8d1 guibg=NONE gui=NONE
+hi Keyword guifg=#ffb8d1 guibg=NONE gui=italic
 "hi Exception
 
 hi PreProc guifg=#ffb8d1 guibg=NONE gui=NONE
@@ -163,7 +164,7 @@ hi Define guifg=#ffb8d1 guibg=NONE gui=NONE
 "hi Macro
 "hi PreCondit
 
-hi Type guifg=#fff352 guibg=NONE gui=NONE
+hi Type guifg=#fff352 guibg=NONE gui=italic
 hi StorageClass guifg=#ffb8d1 guibg=NONE gui=italic
 hi Structure guifg=#fff352 guibg=NONE gui=NONE
 "hi Typedef
@@ -236,8 +237,3 @@ hi cssCommonAttr guifg=#c2ffdf guibg=NONE gui=NONE
 hi cssBraces guifg=NONE guibg=NONE gui=NONE
 
 " }}}
-
-" vim: foldenable foldmethod=marker
-
-" underline folds
-hi Folded guifg=#a8a4b1 guibg=NONE gui=underline
