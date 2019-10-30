@@ -1,24 +1,24 @@
 " ----- Plugin Manager Setup -----
-source $HOME/.config/nvim/config/plug-install.vim
-source $HOME/.config/nvim/config/plug.vim
+source $HOME/.config/nvim/init.d/plug-install.vim
+source $HOME/.config/nvim/init.d/plug.vim
 
 " ----- Load neovim config modules -----
 
 " Display settings (theme, line numbering, etc.)
-source $HOME/.config/nvim/config/display.vim
+source $HOME/.config/nvim/init.d/display.vim
 " Language support settings (IDE bullshit goes here)
-source $HOME/.config/nvim/config/syntax.vim
+source $HOME/.config/nvim/init.d/syntax.vim
 " Miscellaneous configuration settings
-source $HOME/.config/nvim/config/misc.vim
+source $HOME/.config/nvim/init.d/misc.vim
 " Fuzzy finder settings
-source $HOME/.config/nvim/config/fzf.vim
+source $HOME/.config/nvim/init.d/fzf.vim
 " Custom shortcuts
-source $HOME/.config/nvim/config/keymapping.vim
+source $HOME/.config/nvim/init.d/keymapping.vim
 " Folding shortcuts (alt+n to fold at level n)
-source $HOME/.config/nvim/config/folding.vim
+source $HOME/.config/nvim/init.d/folding.vim
 " Leader key bindings
-source $HOME/.config/nvim/config/leader.vim
+source $HOME/.config/nvim/init.d/leader.vim
 " Better o/O Behavior
-source $HOME/.config/nvim/config/better_o.vim
+source $HOME/.config/nvim/init.d/better_o.vim
 " Autosave
-source $HOME/.config/nvim/config/autosave.vim
+source $HOME/.config/nvim/init.d/autosave.vim

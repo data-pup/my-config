@@ -5,6 +5,10 @@
 # initial Ubuntu installation process.
 # --------------------------------------------------------------------------- #
 
+set -o errexit
+set -o pipefail
+set -o xtrace
+
 # First, update the package list.
 sudo apt-get update
 
@@ -13,12 +17,10 @@ sudo apt-get install -y \
     curl \
     htop \
     fish \
+    gcc \
     git \
     ranger \
-    silversearcher-ag \
     tmux \
     tree \
-    vim \
     wget \
     zsh
-
