@@ -31,7 +31,7 @@ bindsym $mod+Shift+s exec slock # Easier locking
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal -e zsh
+bindsym $mod+Return exec konsole
 
 # start a browser window
 bindsym $mod+i exec google-chrome
