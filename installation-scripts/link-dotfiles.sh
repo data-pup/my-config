@@ -17,7 +17,6 @@ ln --force --symbolic $DOTFILE_DIR/gitignore_global $HOME/.gitignore_global
 ln --force --symbolic $DOTFILE_DIR/profile $HOME/.profile
 ln --force --symbolic $DOTFILE_DIR/tmux.conf $HOME/.tmux.conf
 ln --force --symbolic $DOTFILE_DIR/tmux.conf.local $HOME/.tmux.conf.local
-ln --force --symbolic $DOTFILE_DIR/zshrc $HOME/.zshrc
 
 # Create directories in .config directory if they do not already exist.
 mkdir --parents $HOME/.config/fish
@@ -30,6 +29,31 @@ mkdir --parents $HOME/.config/nvim/colors
 mkdir --parents $HOME/.config/nvim/init.d
 mkdir --parents $HOME/.config/nvim/ftplugin
 mkdir --parents $HOME/.config/ranger
+mkdir --parents $HOME/.zshrc.d
+
+# Link zsh dotfiles in home directory.
+ln --force --symbolic $DOTFILE_DIR/zshrc $HOME/.zshrc
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/aliases.zsh \
+  $HOME/.zshrc.d/aliases.zsh
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/fzf.zsh \
+  $HOME/.zshrc.d/fzf.zsh
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/git-aliases.zsh \
+  $HOME/.zshrc.d/git-aliases.zsh
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/git-review.zsh \
+  $HOME/.zshrc.d/git-review.zsh
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/history-settings.zsh \
+  $HOME/.zshrc.d/history-settings.zsh
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/keybinding.zsh \
+  $HOME/.zshrc.d/keybinding.zsh
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/prompt.zsh \
+  $HOME/.zshrc.d/prompt.zsh
 
 # Link fish dotfiles into .config subdirectories.
 ln --force --symbolic $CONFIG_DIR/fish/config.fish $HOME/.config/fish/config.fish
