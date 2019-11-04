@@ -87,6 +87,7 @@ ln --force --symbolic $CONFIG_DIR/nvim/init.d/autosave.vim $HOME/.config/nvim/in
 ln --force --symbolic $CONFIG_DIR/nvim/init.d/plug.vim $HOME/.config/nvim/init.d/plug.vim
 ln --force --symbolic $CONFIG_DIR/nvim/init.d/plug-install.vim $HOME/.config/nvim/init.d/plug-install.vim
 ln --force --symbolic $CONFIG_DIR/nvim/init.d/syntax.vim $HOME/.config/nvim/init.d/syntax.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/empty-guicursor.vim $HOME/.config/nvim/init.d/empty-guicursor.vim
 
 # Link ranger config files.
 ln --force --symbolic $CONFIG_DIR/ranger/rc.conf $HOME/.config/ranger/rc.conf

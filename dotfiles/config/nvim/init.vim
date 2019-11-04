@@ -22,3 +22,5 @@ source $HOME/.config/nvim/init.d/leader.vim
 source $HOME/.config/nvim/init.d/better_o.vim
 " Autosave
 source $HOME/.config/nvim/init.d/autosave.vim
+" Empty guicursor
+source $HOME/.config/nvim/init.d/empty-guicursor.vim
