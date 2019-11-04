@@ -57,10 +57,15 @@ ln --force --symbolic \
 
 # Link fish dotfiles into .config subdirectories.
 ln --force --symbolic $CONFIG_DIR/fish/config.fish $HOME/.config/fish/config.fish
-ln --force --symbolic $CONFIG_DIR/fish/functions/fish_user_key_bindings.fish \
-    $HOME/.config/fish/fish_user_key_bindings.fish
-ln --force --symbolic $CONFIG_DIR/fish/functions/vi_escape_remap.fish \
-    $HOME/.config/fish/vi_escape_remap.fish
+ln --force --symbolic \
+  $CONFIG_DIR/fish/functions/fish_user_key_bindings.fish \
+  $HOME/.config/fish/functions/fish_user_key_bindings.fish
+ln --force --symbolic \
+  $CONFIG_DIR/fish/functions/vi_escape_remap.fish \
+  $HOME/.config/fish/functions/vi_escape_remap.fish
+ln --force --symbolic \
+  $CONFIG_DIR/fish/functions/fzf_git_bindings.fish \
+  $HOME/.config/fish/functions/fzf_git_bindings.fish
 
 # Link htop config file.
 ln --force --symbolic $CONFIG_DIR/htop/htoprc $HOME/.config/htop/htoprc
