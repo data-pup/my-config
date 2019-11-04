@@ -1,11 +1,14 @@
 # # # Load modules from `zshrc.d`
 source $HOME/.zshrc.d/aliases.zsh          # keybindings
-source $HOME/.zshrc.d/fzf.zsh              # fuzzy find bindings
 source $HOME/.zshrc.d/git-aliases.zsh      # git aliases
 source $HOME/.zshrc.d/git-review.zsh       # export git review variable
 source $HOME/.zshrc.d/history-settings.zsh # history size, etc.
 source $HOME/.zshrc.d/keybinding.zsh       # keybindings
 source $HOME/.zshrc.d/prompt.zsh           # personal prompt
+
+# NOTE: This must be called *after* keybinding.zsh or the fzf bindings
+# are trampled. No idea why, not going to find out.
+source $HOME/.zshrc.d/fzf.zsh              # fuzzy find bindings
 
 # # # Miscellaneous options:
 setopt AUTO_CD # Automatically call cd if you enter a directory name.
