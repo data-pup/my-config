@@ -10,7 +10,12 @@ endif
 
 let g:colors_name = 'fairyfloss'
 
-hi Normal guifg=#f8f8f0 guibg=#5a5475 gui=NONE
+" If we would like an opaque background:
+" hi Normal guifg=#f8f8f0 guibg=#5a5475 gui=NONE
+
+" Transparent background:
+hi Normal guifg=#f8f8f0 guibg=NONE ctermbg=NONE
+
 " hi NormalNC
 
 " UI {{{
