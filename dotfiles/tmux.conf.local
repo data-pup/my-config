@@ -34,7 +34,7 @@ tmux_conf_new_pane_reconnect_ssh=false
 # prompt for session name when creating a new session, possible values are:
 #   - true
 #   - false (default)
-tmux_conf_new_session_prompt=false
+tmux_conf_new_session_prompt=true
 
 
 # -- display -------------------------------------------------------------------
@@ -248,23 +248,9 @@ tmux_conf_copy_to_os_clipboard=false
 # Set the fish shell as the default shell for tmux sessions.
 set-option -g default-shell /usr/bin/zsh
 
-# increase history size
-#set -g history-limit 10000
-
-# start with mouse mode enabled
-#set -g mouse on
-
-# force Vi mode
-#   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
-
 # Replace C-b by C-a instead of using both prefixes
 set -gu prefix2
 unbind C-space
 unbind C-b
 set -g prefix C-space
 bind C-a send-prefix
-
-# move status line to top
-set -g status-position top
