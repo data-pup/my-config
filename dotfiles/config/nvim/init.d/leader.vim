@@ -118,8 +118,8 @@ map <leader>rv :vs<CR>:Ranger<CR>.
 " of the mappings separately from the mappings themselves.
 let g:which_key_map['/'] = {
       \ 'name' : 'highlighting' ,
-      \ '/' : 'highlight current word',
-      \ 'w' : 'toggle highlight',
+      \ '/' : 'toggle highlight',
+      \ 'w' : 'highlight current word',
       \ }
 map <leader>// :set hlsearch! hlsearch?<CR>
 map <leader>/w :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
@@ -133,6 +133,3 @@ noremap <Leader>ee :e!<CR>
 " visual search with vim-over with Leader+fr
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
 xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
-
-" Toggle *commenting with Leader+c
-nmap <Leader>c <plug>NERDCommenterToggle
