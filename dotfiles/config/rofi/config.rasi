@@ -1,0 +1,103 @@
+/*
+ * ROFI Fairyfloss
+ *
+ * Based on OneDark.vim (https://github.com/joshdick/onedark.vim)
+ *
+ */
+
+
+* {
+  black:      #000000;
+  red:        #eb6e67;
+  green:      #95ee8f;
+  yellow:     #e6c000;
+  blue:       #6eaafb;
+  magenta:   #ffb8d1;
+  cyan:       #6cdcf7;
+  emphasis:   #c5a3ff;
+  text:       #f8f8f2;
+  text-alt:   #b2b2b2;
+  fg:         #abb2bf;
+  bg:         #716799;
+
+  spacing: 0;
+  background-color: transparent;
+
+  font: "Fira Code Medium 14";
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  fullscreen: true;
+  background-color: #716799;
+}
+
+mainbox {
+  padding: 30% 30%;
+}
+
+inputbar {
+  margin: 0px 0px 20px 0px;
+  padding: 20px 10px 20px 30px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+  border: 1px;
+  border-radius: 3px;
+  border-color: @magenta;
+}
+
+prompt {
+  text-color: @magenta;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 10px;
+}
+
+listview {
+  spacing: 5px;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px 10px 5px 30px;
+  text-color: @text-alt;
+  highlight: bold #e6c000;
+  border-radius: 3px;
+}
+
+element selected {
+  border: 1px;
+  border-radius: 3px;
+  border-color: @emphasis;
+  text-color: @text;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}

@@ -30,6 +30,7 @@ mkdir --parents $HOME/.config/nvim/colors
 mkdir --parents $HOME/.config/nvim/init.d
 mkdir --parents $HOME/.config/nvim/ftplugin
 mkdir --parents $HOME/.config/ranger
+mkdir --parents $HOME/.config/rofi
 mkdir --parents $HOME/.zshrc.d
 
 # Link zsh dotfiles in home directory.
@@ -109,3 +110,6 @@ ln --force --symbolic $CONFIG_DIR/nvim/init.d/empty-guicursor.vim $HOME/.config/
 # Link ranger config files.
 ln --force --symbolic $CONFIG_DIR/ranger/rc.conf $HOME/.config/ranger/rc.conf
 ln --force --symbolic $CONFIG_DIR/ranger/scope.sh $HOME/.config/ranger/scope.sh
+
+# Link rofi config file.
+ln --force --symbolic $CONFIG_DIR/rofi/config.rasi $HOME/.config/rofi/config.rasi
