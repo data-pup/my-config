@@ -40,6 +40,10 @@ let g:which_key_map.k = 'previous buffer'
 nnoremap <Leader>j :bnext<cr>
 let g:which_key_map.j = 'next buffer'
 
+" Open files using the 'Gfp' command defined in `fzf.vim`
+nnoremap <Leader>o :Gfp<CR>
+let g:which_key_map.o = 'open file'
+
 " Write buffer mappings.
 let g:which_key_map.w = {
       \ 'name' : 'save buffers' ,
@@ -76,6 +80,14 @@ let g:which_key_map.t = {
       \ 'q' : [':tabclose', 'close tab'],
       \ }
 
+" Display adjustment mappings.
+let g:which_key_map.d = {
+      \ 'name' : 'display settings' ,
+      \ 'l' : [':call NumberToggle()', 'toggle relative line numbers'],
+      \ 'n' : [':NERDTreeToggle', 'toggle NERDTree'],
+      \ 'w' : [':set list!', 'toggle whitespace characters'],
+      \ }
+
 " Language support mappings via ALE.
 let g:which_key_map[';'] = {
       \ 'name' : 'IDE nonsense' ,
@@ -86,6 +98,7 @@ let g:which_key_map[';'] = {
       \ 'k' : ['<Plug>(ale_previous_wrap)', 'previous error'],
       \ 'r' : [':ALERename', 'rename symbol'],
       \ 'd' : ['<Plug>(ale_detail)', 'error detail'],
+      \ 'h' : ['<Plug>(ale_hover)', 'get hover information'],
       \ 'g' : {
         \ 'name' : 'go to',
         \ 'd' : ['<Plug>(ale_go_to_definition)', 'definition'],
@@ -124,12 +137,18 @@ let g:which_key_map['/'] = {
 map <leader>// :set hlsearch! hlsearch?<CR>
 map <leader>/w :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
 
+" visual search with vim-over with Leader+fr
+" NOTE: Because these involve strings of commands, we register the names
+" of the mappings separately from the mappings themselves.
+let g:which_key_map.f = {
+      \ 'name' : 'visual find and replace' ,
+      \ 'r' : 'visual find and replace',
+      \ }
+nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
+xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
+
 " TODO:
 " ----------------------------------------------------------------------
 
 " Force reload file with Leader+e
 noremap <Leader>ee :e!<CR>
-
-" visual search with vim-over with Leader+fr
-nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
-xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
