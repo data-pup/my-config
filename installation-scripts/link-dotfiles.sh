@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# --------------------------------------------------------------------------- #
+# -------------------------------------------------------------------- #
 # Adds symlinks for dotfiles, pointing to their copy in this repository.
-# --------------------------------------------------------------------------- #
+# -------------------------------------------------------------------- #
 
 set -o errexit
 set -o pipefail
@@ -21,6 +21,7 @@ ln --force --symbolic $DOTFILE_DIR/tmux.conf.local $HOME/.tmux.conf.local
 # Create directories in .config directory if they do not already exist.
 mkdir --parents $HOME/.config/fish
 mkdir --parents $HOME/.config/fish/functions
+mkdir --parents $HOME/.config/fish/init.d
 mkdir --parents $HOME/.config/htop
 mkdir --parents $HOME/.config/i3
 mkdir --parents $HOME/.config/i3blocks
@@ -56,7 +57,9 @@ ln --force --symbolic \
   $HOME/.zshrc.d/prompt.zsh
 
 # Link fish dotfiles into .config subdirectories.
-ln --force --symbolic $CONFIG_DIR/fish/config.fish $HOME/.config/fish/config.fish
+ln --force --symbolic \
+  $CONFIG_DIR/fish/config.fish \
+  $HOME/.config/fish/config.fish
 ln --force --symbolic \
   $CONFIG_DIR/fish/functions/fish_user_key_bindings.fish \
   $HOME/.config/fish/functions/fish_user_key_bindings.fish
@@ -66,6 +69,15 @@ ln --force --symbolic \
 ln --force --symbolic \
   $CONFIG_DIR/fish/functions/fzf_git_bindings.fish \
   $HOME/.config/fish/functions/fzf_git_bindings.fish
+ln --force --symbolic \
+  $CONFIG_DIR/fish/init.d/abbreviations.fish \
+  $HOME/.config/fish/init.d/abbreviations.fish
+ln --force --symbolic \
+  $CONFIG_DIR/fish/init.d/aliases.fish \
+  $HOME/.config/fish/init.d/aliases.fish
+ln --force --symbolic \
+  $CONFIG_DIR/fish/init.d/prompt.fish \
+  $HOME/.config/fish/init.d/prompt.fish
 
 # Link htop config file.
 ln --force --symbolic $CONFIG_DIR/htop/htoprc $HOME/.config/htop/htoprc
@@ -97,6 +109,3 @@ ln --force --symbolic $CONFIG_DIR/nvim/init.d/empty-guicursor.vim $HOME/.config/
 # Link ranger config files.
 ln --force --symbolic $CONFIG_DIR/ranger/rc.conf $HOME/.config/ranger/rc.conf
 ln --force --symbolic $CONFIG_DIR/ranger/scope.sh $HOME/.config/ranger/scope.sh
-
-# Return to the original directory.
-cd -
