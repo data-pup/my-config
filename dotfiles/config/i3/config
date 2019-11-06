@@ -16,7 +16,7 @@ exec --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore   # Wallpaper manager.
 
 ### Keybindings
-bindsym $mod+Shift+s exec slock # Easier locking
+bindsym $mod+Shift+s exec i3lock # Easier locking
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
