@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
-cargo install ripgrep
-cargo install fd-find
-cargo install exa
+cargo install ripgrep  # `grep` replacement
+cargo install fd-find  # `find` replacement
+cargo install exa      # `ls` replacement
+cargo install bat      # `cat` replacement

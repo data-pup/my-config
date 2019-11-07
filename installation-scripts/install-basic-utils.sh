@@ -9,7 +9,6 @@ sudo apt-get update
 
 # Next, install my desired packages.
 sudo apt-get install -y \
-    bat \
     curl \
     htop \
     fish \
