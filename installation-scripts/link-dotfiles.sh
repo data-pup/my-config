@@ -19,6 +19,8 @@ ln --force --symbolic $DOTFILE_DIR/tmux.conf $HOME/.tmux.conf
 ln --force --symbolic $DOTFILE_DIR/tmux.conf.local $HOME/.tmux.conf.local
 
 # Create directories in .config directory if they do not already exist.
+mkdir --parents $HOME/.config/bat
+mkdir --parents $HOME/.config/bat/themes
 mkdir --parents $HOME/.config/fish
 mkdir --parents $HOME/.config/fish/functions
 mkdir --parents $HOME/.config/fish/init.d
@@ -113,3 +115,9 @@ ln --force --symbolic $CONFIG_DIR/ranger/scope.sh $HOME/.config/ranger/scope.sh
 
 # Link rofi config file.
 ln --force --symbolic $CONFIG_DIR/rofi/config.rasi $HOME/.config/rofi/config.rasi
+
+# Link bat config files.
+ln --force --symbolic $CONFIG_DIR/bat/config $HOME/.config/bat/config
+ln --force --symbolic \
+  $CONFIG_DIR/bat/themes/fairyfloss.tmTheme \
+  $HOME/.config/bat/themes/fairyfloss.tmTheme
