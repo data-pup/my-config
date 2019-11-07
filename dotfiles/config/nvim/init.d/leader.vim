@@ -88,6 +88,19 @@ let g:which_key_map.d = {
       \ 'w' : [':set list!', 'toggle whitespace characters'],
       \ }
 
+" TODO: Git bindings.
+let g:which_key_map.g = {
+      \ 'name' : 'git' ,
+      \ 'b' : [':Gblame', 'git blame'],
+      \ 'l' : [':Glog', 'git log'],
+      \ 's' : [':Gstatus', 'git status'],
+      \ 'd' : {
+        \ 'name' : 'diff',
+        \ 'd' : [':Gvdiffsplit', 'git diff (vertical)'],
+        \ 's' : [':Gdiffsplit', 'git diff (horizontal)'],
+        \ }
+      \ }
+
 " Language support mappings via ALE.
 let g:which_key_map[';'] = {
       \ 'name' : 'IDE nonsense' ,
