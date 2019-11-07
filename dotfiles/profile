@@ -11,37 +11,38 @@
 # Set LESS to provide default option flags for `less`
 export LESS="--prompt=[file\: %f][line\: %lb of %L][page\: %db of %D]?e[END]:[%Pb\%]$ --LINE-NUMBERS --HILITE-UNREAD --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
 
-# if running bash
+# Use `bat` as a colorizing pager for `man`
+export MANPAGER="sh -c 'col -b | bat -l man -p'"
+
+# Load `.bashrc` if it exists
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
+# Set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set PATH so it includes user's private bin if it exists
+# Add `bin` and  `.local/bin` to path
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# set PATH so it includes Cargo's bin if it exists
+# Add rustc source path for ctags
 if [ -d "$HOME/.cargo/bin" ] ; then
   export PATH="$HOME/.cargo/bin:$PATH"
-  # Add rustc source path for ctags.
   export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
 fi
 
-# set PATH so it includes Cargo's bin if it exists
+# Set PATH so it includes yarn's bin if it exists
 if [ -d "$HOME/.yarn/bin" ] ; then
   export PATH="$HOME/.yarn/bin:$PATH"
 fi
 
-# load nvm automatically if it exists
+# Load nvm automatically if it exists
 if [ -d "$HOME/.nvm" ] ; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
