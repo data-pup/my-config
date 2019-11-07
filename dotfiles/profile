@@ -14,6 +14,9 @@ export LESS="--prompt=[file\: %f][line\: %lb of %L][page\: %db of %D]?e[END]:[%P
 # Use `bat` as a colorizing pager for `man`
 export MANPAGER="sh -c 'col -b | bat -l man -p'"
 
+# Do not load ranger's default rc.conf
+RANGER_LOAD_DEFAULT_RC="false"
+
 # Load `.bashrc` if it exists
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
