@@ -88,7 +88,7 @@ let g:which_key_map.d = {
       \ 'w' : [':set list!', 'toggle whitespace characters'],
       \ }
 
-" TODO: Git bindings.
+" Git bindings.
 let g:which_key_map.g = {
       \ 'name' : 'git' ,
       \ 'b' : [':Gblame', 'git blame'],
