@@ -10,6 +10,11 @@ source $HOME/.zshrc.d/prompt.zsh           # personal prompt
 # are trampled. No idea why, not going to find out.
 source $HOME/.zshrc.d/fzf.zsh              # fuzzy find bindings
 
-# # # Miscellaneous options:
+# Miscellaneous options:
 setopt AUTO_CD # Automatically call cd if you enter a directory name.
 setopt RM_STAR_WAIT # 10 second delay before calling rm if a * regex is used.
+
+# Print a fortune if cowsay/fortune are installed.
+if [ -x /usr/games/cowthink -a -x /usr/games/fortune ]; then
+    fortune -s | cowthink -f eyes
+fi

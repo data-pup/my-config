@@ -9,13 +9,16 @@ sudo apt-get update
 
 # Next, install my desired packages.
 sudo apt-get install -y \
-    curl \
-    htop \
-    fish \
-    gcc \
-    git \
-    ranger \
-    tmux \
-    tree \
-    wget \
-    zsh
+    arandr \                           # useful for managing monitors
+    curl \                             # data transfer tool
+    fish \                             # interactive shell of choice
+    fortune-mod \                      # fortune utility
+    fortunes \                         # fortune files
+    gcc \                              # shockingly, not included
+    git \                              # see above
+    htop \                             # see above
+    ranger \                           # file browsing utility
+    tmux \                             # terminal multiplexer
+    tree \                             # prints file trees
+    wget \                             # network downloader
+    zsh                                # another shell

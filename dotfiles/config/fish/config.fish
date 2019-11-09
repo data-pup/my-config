@@ -15,3 +15,8 @@ end
 
 # Set gitconfig alias environment for branch reviews.
 set -g -x REVIEW_BASE 'master'
+
+# Print a fortune if cowsay/fortune are installed.
+if command -sq cowthink; and command -sq fortune
+    fortune -s | cowthink -f eyes
+end
