@@ -20,7 +20,7 @@ RANGER_LOAD_DEFAULT_RC="false"
 # Load `.bashrc` if it exists
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+      . "$HOME/.bashrc"
     fi
 fi
 
