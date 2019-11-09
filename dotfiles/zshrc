@@ -1,4 +1,4 @@
-# # # Load modules from `zshrc.d`
+# Load modules from `zshrc.d`
 source $HOME/.zshrc.d/aliases.zsh          # keybindings
 source $HOME/.zshrc.d/git-aliases.zsh      # git aliases
 source $HOME/.zshrc.d/git-review.zsh       # export git review variable

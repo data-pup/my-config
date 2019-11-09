@@ -9,7 +9,14 @@
 #umask 022
 
 # Set LESS to provide default option flags for `less`
-export LESS="--prompt=[file\: %f][line\: %lb of %L][page\: %db of %D]?e[END]:[%Pb\%]$ --LINE-NUMBERS --HILITE-UNREAD --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
+export LESS="--prompt=\
+[file\: %f]\
+[line\: %lb of %L]\
+[page\: %db of %D]?e[END]:[%Pb\%]$\
+  --HILITE-UNREAD \
+  --RAW-CONTROL-CHARS \
+  --quit-if-one-screen \
+  --no-init"
 
 # Use `bat` as a colorizing pager for `man`
 export MANPAGER="sh -c 'col -b | bat -l man -p'"
