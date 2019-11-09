@@ -1,4 +1,9 @@
 if status --is-interactive
+  # # # Replacements
+  alias vim='nvim'
+  alias ls='exa'
+  alias cat='bat'
+
   # Git aliases.
   alias gits="git status"
   alias gitss="git status --short"
@@ -12,9 +17,6 @@ if status --is-interactive
   alias gitlog="git log --graph --decorate --pretty=oneline"
 
   # # # ls aliases
-
-  # Use 'exa' as an 'ls' replacement
-  alias ls="exa"
 
   # Shortcuts
   alias lsa="ls -a"

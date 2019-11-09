@@ -1,6 +1,7 @@
 # # # Replacements
 alias vim='nvim'
-alias ls="exa"
+alias ls='exa'
+alias cat='bat'
 
 # Clear screen alias.
 alias cls='clear'
