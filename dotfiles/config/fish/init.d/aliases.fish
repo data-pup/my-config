@@ -49,4 +49,7 @@ if status --is-interactive
 
   # Set-Location alias lol.
   alias sl="cd"
+
+  # Assign `ranger-cd` to `rcd`
+  alias rcd="ranger-cd"
 end

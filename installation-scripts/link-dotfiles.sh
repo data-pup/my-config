@@ -73,6 +73,9 @@ ln --force --symbolic \
   $CONFIG_DIR/fish/functions/fzf_git_bindings.fish \
   $HOME/.config/fish/functions/fzf_git_bindings.fish
 ln --force --symbolic \
+  $CONFIG_DIR/fish/functions/ranger_cd.fish \
+  $HOME/.config/fish/functions/ranger_cd.fish
+ln --force --symbolic \
   $CONFIG_DIR/fish/init.d/abbreviations.fish \
   $HOME/.config/fish/init.d/abbreviations.fish
 ln --force --symbolic \
