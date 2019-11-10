@@ -92,7 +92,7 @@ let g:which_key_map.d = {
 let g:which_key_map.g = {
       \ 'name' : 'git' ,
       \ 'b' : [':Gblame', 'git blame'],
-      \ 'c' : [':Gommit -v', 'git commit'],
+      \ 'c' : [':Gcommit -v', 'git commit'],
       \ 'l' : [':Glog', 'git log'],
       \ 's' : [':Gstatus', 'git status'],
       \ 'd' : {

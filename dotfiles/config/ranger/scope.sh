@@ -105,6 +105,8 @@ case "$mimetype" in
             pygmentize_format=terminal
             highlight_format=ansi
         fi
+        export COLORTERM=screen-256color
+        try safepipe bat --color=always  --style="changes,grid,numbers"  "$path" && { dump | trim; exit 5; }
         try safepipe highlight --style=vampire --out-format=${highlight_format} "$path" && { dump | trim; exit 5; }
         try safepipe pygmentize -f ${pygmentize_format} "$path" && { dump | trim; exit 5; }
         exit 2;;
