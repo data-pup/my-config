@@ -10,6 +10,7 @@ sudo apt-get update
 # Next, install my desired packages.
 sudo apt-get install -y \
     arandr \                           # useful for managing monitors
+    cowsay \                           # because i like to have fun
     curl \                             # data transfer tool
     fish \                             # interactive shell of choice
     fortune-mod \                      # fortune utility

@@ -21,6 +21,7 @@ ln --force --symbolic $DOTFILE_DIR/tmux.conf.local $HOME/.tmux.conf.local
 # Create directories in .config directory if they do not already exist.
 mkdir --parents $HOME/.config/bat
 mkdir --parents $HOME/.config/bat/themes
+mkdir --parents $HOME/.config/cowsay
 mkdir --parents $HOME/.config/fish
 mkdir --parents $HOME/.config/fish/functions
 mkdir --parents $HOME/.config/fish/init.d
@@ -132,3 +133,6 @@ ln --force --symbolic \
 ln --force --symbolic \
   $DOTFILE_DIR/local/bin/diff-so-fancy \
   $HOME/.local/bin/diff-so-fancy
+
+# Link custom cowfile.
+ln --force --symbolic $CONFIG_DIR/cowsay/whitepearl.cow $HOME/.config/cowsay/whitepearl.cow

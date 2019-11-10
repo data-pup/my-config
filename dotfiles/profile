@@ -21,6 +21,9 @@ export LESS="--prompt=\
 # Use `bat` as a colorizing pager for `man`
 export MANPAGER="sh -c 'col -b | bat -l man -p'"
 
+# Add the cowsay config directory to the cowpath
+export COWPATH="$HOME/.config/cowsay/"
+
 # Do not load ranger's default rc.conf
 RANGER_LOAD_DEFAULT_RC="false"
 
