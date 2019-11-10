@@ -35,6 +35,9 @@ mkdir --parents $HOME/.config/ranger
 mkdir --parents $HOME/.config/rofi
 mkdir --parents $HOME/.zshrc.d
 
+# Create a `.local/bin` directory for holding miscellaneous scripts.
+mkdir --parents $HOME/.local/bin
+
 # Link zsh dotfiles in home directory.
 ln --force --symbolic $DOTFILE_DIR/zshrc $HOME/.zshrc
 ln --force --symbolic \
@@ -124,3 +127,8 @@ ln --force --symbolic $CONFIG_DIR/bat/config $HOME/.config/bat/config
 ln --force --symbolic \
   $CONFIG_DIR/bat/themes/fairyfloss.tmTheme \
   $HOME/.config/bat/themes/fairyfloss.tmTheme
+
+# Link `diff-so-fancy` for nice git diffs.
+ln --force --symbolic \
+  $DOTFILE_DIR/local/bin/diff-so-fancy \
+  $HOME/.local/bin/diff-so-fancy
