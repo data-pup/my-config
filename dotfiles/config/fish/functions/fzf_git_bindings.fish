@@ -1,7 +1,4 @@
 function fzf_git_bindings
-  # TODO: This should probably be moved into fish.config
-  export FZF_CTRL_T_COMMAND='rg --files --hidden'
-
   # TODO: Add fish equivalents to zsh's git bindings.
 
   function is_in_git_repo -d "Check if currently in a git repository"

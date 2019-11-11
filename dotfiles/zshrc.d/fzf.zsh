@@ -1,5 +1,19 @@
-# # # Load fuzzy find.
-export FZF_CTRL_T_COMMAND='rg --files --hidden'
+# Uses fd as default command showing also hidden files
+FZF_DEFAULT_COMMAND="fd --hidden"
+
+# If current selection is a text file shows its content,
+# if it's a directory shows its content, the rest is ignored
+FZF_CTRL_T_OPTS="--no-height --preview-window wrap --preview '
+if [[ -f {} ]]; then
+    file --mime {} | grep -q \"text\/.*;\" && bat --color \"always\" {} || (tput setaf 1; file --mime {})
+elif [[ -d {} ]]; then
+    exa --long --color=always {}
+else;
+    tput setaf 1; echo Something went wrong!
+fi'"
+
+# Use `exa` to preview directories when using Alt+c.
+FZF_ALT_C_OPTS="--no-height --preview 'exa --long --color=always {} | head -200'"
 
 is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1

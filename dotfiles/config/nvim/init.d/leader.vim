@@ -41,8 +41,11 @@ nnoremap <Leader>j :bnext<cr>
 let g:which_key_map.j = 'next buffer'
 
 " Open files using the 'Gfp' command defined in `fzf.vim`
-nnoremap <Leader>o :Gfp<CR>
-let g:which_key_map.o = 'open file'
+let g:which_key_map.o = {
+      \ 'name' : 'open file' ,
+      \ 'o' : [':Gfp', 'search by name'],
+      \ 'r' : [':Rg', 'search by regex'],
+      \ }
 
 " Write buffer mappings.
 let g:which_key_map.w = {
