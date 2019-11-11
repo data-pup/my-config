@@ -39,7 +39,7 @@ let s:ctermWhite = "231"
 let s:ctermGray = "243"
 
 let g:airline#themes#fairyfloss#palette = {}
-let s:modified = { 'airline_c': [ s:guiRose, '', 215, '', '' ] }
+let s:modified = { 'airline_c': [ s:guiGold, '', 215, '', '' ] }
 
 " Normal mode
 let s:N1 = [ s:guiDarkGray , s:guiWhite , s:ctermSilver , s:ctermLavender  ]
@@ -71,10 +71,22 @@ let g:airline#themes#fairyfloss#palette.replace_modified = s:modified
 
 " Inactive mode
 let s:IN1 = [ s:guiGray , s:guiDarkGray , s:ctermGray , s:ctermDarkGray ]
-let s:IN2 = [ s:guiBgPurple , s:guiShadow , s:ctermBgPurple , s:ctermShadow ]
-let s:IN3 = [ s:guiBgPurple , s:guiShadow , s:ctermBgPurple , s:ctermShadow ]
+let s:IN2 = [ s:guiBgPurple , s:guiDarkGray , s:ctermBgPurple , s:ctermShadow ]
+let s:IN3 = [ s:guiBgPurple , s:guiDarkGray , s:ctermBgPurple , s:ctermShadow ]
 let g:airline#themes#fairyfloss#palette.inactive = airline#themes#generate_color_map(s:IN1, s:IN2, s:IN3)
 let g:airline#themes#fairyfloss#palette.inactive_modified = s:modified
+
+" Command mode
+let s:C1 = [ s:guiWhite , s:guiDarkGray , s:ctermSilver , s:ctermLavender  ]
+let s:C2 = s:I2
+let s:C3 = s:I3
+let g:airline#themes#fairyfloss#palette.commandline = airline#themes#generate_color_map(s:C1, s:C2, s:C3)
+let g:airline#themes#fairyfloss#palette.commandline_modified = s:modified
+
+" This is used for misc. accents, such as the read-only flag.
+let g:airline#themes#fairyfloss#palette.accents = {
+  \ 'red': [ s:guiFuschia, '' , 160 , ''  ]
+  \ }
 
 " CtrlP
 if !get(g:, 'loaded_ctrlp', 0)
