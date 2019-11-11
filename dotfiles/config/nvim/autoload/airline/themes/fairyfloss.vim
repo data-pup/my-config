@@ -40,20 +40,30 @@ let s:ctermGray = "243"
 
 let g:airline#themes#fairyfloss#palette = {}
 let s:modified = { 'airline_c': [ s:guiGold, '', 215, '', '' ] }
+let s:warning = [ s:guiWhite , s:guiGold , 232, 92, '']
+let s:error = [ s:guiWhite , s:guiGold , 232, 92, '']
 
 " Normal mode
 let s:N1 = [ s:guiDarkGray , s:guiWhite , s:ctermSilver , s:ctermLavender  ]
 let s:N2 = [ s:guiWhite , s:guiLavender , s:ctermWhite , s:ctermDarkGray  ]
 let s:N3 = [ s:guiLavender , s:guiDarkGray , s:ctermBgPurple , s:ctermShadow  ]
 let g:airline#themes#fairyfloss#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
+let g:airline#themes#fairyfloss#palette.normal.airline_warning = s:warning
+let g:airline#themes#fairyfloss#palette.normal.airline_error = s:error
 let g:airline#themes#fairyfloss#palette.normal_modified = s:modified
+let g:airline#themes#fairyfloss#palette.normal_modified.airline_warning = s:warning
+let g:airline#themes#fairyfloss#palette.normal_modified.airline_error = s:error
 
 " Insert mode
 let s:I1 = s:N1
 let s:I2 = [ s:guiWhite , s:guiRose , s:ctermWhite , s:ctermDarkGray  ]
 let s:I3 = [ s:guiRose , s:guiDarkGray , s:ctermWhite , s:ctermShadow  ]
 let g:airline#themes#fairyfloss#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+let g:airline#themes#fairyfloss#palette.insert.airline_warning = s:warning
+let g:airline#themes#fairyfloss#palette.insert.airline_error = s:error
 let g:airline#themes#fairyfloss#palette.insert_modified = s:modified
+let g:airline#themes#fairyfloss#palette.insert_modified.airline_warning = s:warning
+let g:airline#themes#fairyfloss#palette.insert_modified.airline_error = s:error
 
 " Visual mode
 let s:V1 = s:N1
