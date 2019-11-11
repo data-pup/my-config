@@ -40,11 +40,11 @@ let g:which_key_map.k = 'previous buffer'
 nnoremap <Leader>j :bnext<cr>
 let g:which_key_map.j = 'next buffer'
 
-" Open files using the 'Gfp' command defined in `fzf.vim`
+" Open files using the fuzzy finding commands defined in `fzf.vim`.
 let g:which_key_map.o = {
       \ 'name' : 'open file' ,
       \ 'o' : [':Gfp', 'search by name'],
-      \ 'r' : [':Rg', 'search by regex'],
+      \ 'r' : [':Rg!', 'search by regex'],
       \ }
 
 " Write buffer mappings.

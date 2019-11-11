@@ -33,6 +33,7 @@ mkdir --parents $HOME/.config/nvim/colors
 mkdir --parents $HOME/.config/nvim/init.d
 mkdir --parents $HOME/.config/nvim/ftplugin
 mkdir --parents $HOME/.config/ranger
+mkdir --parents $HOME/.config/ripgrep
 mkdir --parents $HOME/.config/rofi
 mkdir --parents $HOME/.zshrc.d
 
@@ -128,6 +129,9 @@ ln --force --symbolic $CONFIG_DIR/bat/config $HOME/.config/bat/config
 ln --force --symbolic \
   $CONFIG_DIR/bat/themes/fairyfloss.tmTheme \
   $HOME/.config/bat/themes/fairyfloss.tmTheme
+
+# Link rofi config file.
+ln --force --symbolic $CONFIG_DIR/ripgrep/rc $HOME/.config/ripgrep/rc
 
 # Link `diff-so-fancy` for nice git diffs.
 ln --force --symbolic \

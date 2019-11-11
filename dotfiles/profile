@@ -27,6 +27,9 @@ export COWPATH="$HOME/.config/cowsay/"
 # Do not load ranger's default rc.conf
 RANGER_LOAD_DEFAULT_RC="false"
 
+# Use a config file for ripgrep (rg)
+RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/rc
+
 # Load `.bashrc` if it exists
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
