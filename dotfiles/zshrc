@@ -16,5 +16,5 @@ setopt RM_STAR_WAIT # 10 second delay before calling rm if a * regex is used.
 
 # Print a fortune if cowsay/fortune are installed.
 if [ -x /usr/games/cowthink -a -x /usr/games/fortune ]; then
-    fortune -s | cowthink -f whitepearl
+    fortune -s | cowthink -f whale
 fi

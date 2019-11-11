@@ -136,3 +136,4 @@ ln --force --symbolic \
 
 # Link custom cowfile.
 ln --force --symbolic $CONFIG_DIR/cowsay/whitepearl.cow $HOME/.config/cowsay/whitepearl.cow
+ln --force --symbolic $CONFIG_DIR/cowsay/whale.cow $HOME/.config/cowsay/whale.cow
