@@ -28,8 +28,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Open NERDTree with `Ctrl+n`
-nnoremap <C-n> :NERDTreeToggle<CR>
+" Open NERDTree, pointing to the current file, with `Ctrl+n`.
+nnoremap <silent> <expr> <C-n> g:NERDTree.IsOpen()
+  \ ? "\:NERDTreeClose<CR>"
+  \ : bufexists(expand('%'))
+    \ ? "\:NERDTreeFind<CR>"
+    \: "\:NERDTree<CR>"
 
 " Remap `Ctrl+p` to the 'Gfp' command defined in `fzf.vim`
 nnoremap <C-p> :Gfp<CR>
