@@ -2,7 +2,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Airline - statusline plugin.
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" NOTE: For now, using a handrolled variation of the fairyfloss theme.
+" This will be removed at some point, keeping it here for now.
+" Plug 'vim-airline/vim-airline-themes'
 
 " ALE - Asynchronous Linting Engine
 Plug 'w0rp/ale'

@@ -29,6 +29,7 @@ mkdir --parents $HOME/.config/htop
 mkdir --parents $HOME/.config/i3
 mkdir --parents $HOME/.config/i3blocks
 mkdir --parents $HOME/.config/nvim
+mkdir --parents $HOME/.config/nvim/autoload/airline/themes
 mkdir --parents $HOME/.config/nvim/colors
 mkdir --parents $HOME/.config/nvim/init.d
 mkdir --parents $HOME/.config/nvim/ftplugin
@@ -99,6 +100,7 @@ ln --force --symbolic $CONFIG_DIR/i3blocks/config $HOME/.config/i3blocks/config
 
 # Link neovim config files. (It's a lot, I know)
 ln --force --symbolic $CONFIG_DIR/nvim/init.vim $HOME/.config/nvim/init.vim
+ln --force --symbolic $CONFIG_DIR/nvim/autoload/airline/themes/fairyfloss.vim $HOME/.config/nvim/autoload/airline/themes/fairyfloss.vim
 ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/tsx.vim $HOME/.config/nvim/ftplugin/tsx.vim
 ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/rust.vim $HOME/.config/nvim/ftplugin/rust.vim
 ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/javascript.vim $HOME/.config/nvim/ftplugin/javascript.vim

@@ -6,10 +6,27 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
-" Set theme to fairyfloss
+" Theme settings
 syntax enable
-colorscheme fairyfloss
-let g:airline_theme='fairyfloss'
+colorscheme fairyfloss                       " Set syntax theme
+let g:airline_theme='fairyfloss'             " Set statusline theme
+let g:airline#extensions#tabline#enabled = 1 " Tabline
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_skip_empty_sections = 1
+
+" " Initialize airline symbols dictionary.
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" Fill airline symbols dictionary.
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '¶'
 
 " Line numbering settings
 set number
@@ -26,9 +43,6 @@ set laststatus=2
 
 " Try to keep 2 lines above/below the current line in view for context.
 set scrolloff=5
-
-" Tabline
-let g:airline#extensions#tabline#enabled = 1
 
 " Show matching bracket when the cursor has selected a bracket
 set showmatch
