@@ -9,17 +9,19 @@ sudo apt-get update
 
 # Next, install my desired packages.
 sudo apt-get install -y \
-    arandr \                           # useful for managing monitors
-    cowsay \                           # because i like to have fun
-    curl \                             # data transfer tool
-    fish \                             # interactive shell of choice
-    fortune-mod \                      # fortune utility
-    fortunes \                         # fortune files
-    gcc \                              # shockingly, not included
-    git \                              # see above
-    htop \                             # see above
-    ranger \                           # file browsing utility
-    tmux \                             # terminal multiplexer
-    tree \                             # prints file trees
-    wget \                             # network downloader
-    zsh                                # another shell
+    arandr \
+    cowsay \
+    curl \
+    fish \
+    fortune-mod \
+    fortunes \
+    gcc \
+    git \
+    htop \
+    libclang-dev \
+    llvm \
+    ranger \
+    tmux \
+    tree \
+    wget \
+    zsh
