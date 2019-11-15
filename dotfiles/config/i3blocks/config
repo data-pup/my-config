@@ -70,6 +70,7 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
+label=IP:
 #instance=wlan0
 color=#FFB8D1
 interval=10
@@ -82,40 +83,47 @@ separator=false
 
 [bandwidth]
 color=#FFB8D1
-label=BANDWIDTH:
+label=NET:
 #instance=eth0
 interval=5
 
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-[cpu_usage]
-color=#FFB8D1
-label=CPU:
-interval=10
-min_width=CPU: 100.00%
-separator=false
+# # CPU usage
+# #
+# # The script may be called with -w and -c switches to specify thresholds,
+# # see the script for details.
+# [cpu_usage]
+# color=#FFB8D1
+# label=CPU:
+# interval=10
+# min_width=CPU: 100.00%
+# separator=false
 
-[load_average]
-color=#FFB8D1
-label=LOAD AVG:
-interval=10
-
-# Battery indicator
-#
-# The battery instance defaults to 0.
-[battery]
-label=BAT:
-#label=⚡
-#instance=1
-interval=30
+# [load_average]
+# color=#FFB8D1
+# label=LOAD AVG:
+# interval=10
 
 # Date Time
 #
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
-label=TIME:
+command=date '+%Y-%m-%d'
+label=DATE:
+color=#F8F8F2
+interval=5
+
+# Date Time
+#
+[local-time]
+command=date '+%H:%M:%S'
+label=LOCAL:
+color=#F8F8F2
+interval=5
+
+# UTC Time
+#
+[uct-time]
+command=date --utc '+%H:%M:%S'
+label=UTC:
 color=#F8F8F2
 interval=5
 
@@ -142,6 +150,16 @@ interval=5
 #[temperature]
 #label=TEMP
 #interval=10
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+label=BAT:
+color=#E6C000
+#label=⚡
+#instance=1
+interval=30
 
 # Key indicators
 #
