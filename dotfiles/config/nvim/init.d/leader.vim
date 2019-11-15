@@ -61,6 +61,7 @@ let g:which_key_map.q = {
       \ 'a' : [':qa', 'close all buffers'],
       \ 'f' : [':q!', 'close current buffer w/o saving'],
       \ 'q' : [':q', 'close current buffer'],
+      \ 'o' : [':%bd|e#|bd#', 'close all other buffers'],
       \ }
 
 " General buffer management mappings.
