@@ -10,6 +10,7 @@ sudo apt-get update
 # Next, install my desired packages.
 sudo apt-get install -y \
     arandr \
+    cmake \
     cowsay \
     curl \
     fish \
