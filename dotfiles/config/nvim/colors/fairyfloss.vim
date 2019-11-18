@@ -92,7 +92,7 @@ hi Folded guifg=#a8a4b1 guibg=NONE gui=underline
 " Search / Substitution {{{
 
 hi IncSearch guifg=bg guibg=#c2ffdf gui=NONE
-hi Search guifg=#fffffff guibg=#8076aa gui=NONE
+hi Search guifg=NONE guibg=NONE gui=inverse
 hi Substitute guifg=#f8f8f0 guibg=#f92672 gui=NONE
 "hi QuickFixLine
 
