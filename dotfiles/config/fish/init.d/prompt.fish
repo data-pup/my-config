@@ -21,7 +21,8 @@ end
 
 # # # Segments functions
 set -g current_bg NONE
-set -g segment_separator \u2588
+# set -g segment_separator \u2588
+set -g segment_separator ""
 
 function prompt_segment -d "Function to draw a segment"
   set -l bg
@@ -57,7 +58,7 @@ function prompt_finish -d "Close open segments"
   if [ -n $current_bg ]
     set_color -b normal
     set_color $current_bg
-    echo "✨  "
+    echo ": "
   end
   set -g current_bg NONE
 end
