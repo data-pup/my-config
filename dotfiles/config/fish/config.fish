@@ -16,9 +16,6 @@ end
 # Uses fd as default command showing also hidden files
 set -g -x FZF_DEFAULT_COMMAND "fd --hidden"
 
-# Uses fd as default command showing also hidden files
-set -g -x FZF_CTRL_T_COMMAND "fd --hidden --files"
-
 # If current selection is a text file shows its content,
 # if it's a directory shows its content, the rest is ignored
 set -g -x FZF_CTRL_T_OPTS "--no-height --preview-window wrap --preview '
