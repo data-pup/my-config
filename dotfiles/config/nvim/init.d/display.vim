@@ -36,7 +36,7 @@ set nowrap
 
 " Mark the 80 char column
 set cursorline cursorcolumn
-set colorcolumn=73,81,121
+set colorcolumn=74,81,101,121
 
 " Always show the status line
 set laststatus=2

@@ -90,6 +90,11 @@ let g:which_key_map.d = {
       \ 'l' : [':call NumberToggle()', 'toggle relative line numbers'],
       \ 'n' : [':NERDTreeToggle', 'toggle NERDTree'],
       \ 'w' : [':set list!', 'toggle whitespace characters'],
+      \ 'c' : {
+        \ 'name' : 'ruler columns',
+        \ '[' : [':set colorcolumn=74,81,101,121', 'show rulers'],
+        \ ']' : [':set colorcolumn=', 'hide rulers'],
+        \ }
       \ }
 
 " Git bindings.
