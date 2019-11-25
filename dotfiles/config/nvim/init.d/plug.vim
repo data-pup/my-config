@@ -15,8 +15,9 @@ Plug 'pseewald/vim-anyfold'
 " Deoplete - asynchronous completion.
 Plug 'Shougo/deoplete.nvim'
 
-" Fugitive - git wrapper.
+" Fugitive/Rhubarb - git wrapper, plus GitHub extensions.
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " fzf - fuzzy finder.
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
