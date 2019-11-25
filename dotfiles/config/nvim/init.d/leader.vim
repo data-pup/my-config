@@ -102,12 +102,16 @@ let g:which_key_map.g = {
       \ 'name' : 'git' ,
       \ 'b' : [':Gblame', 'git blame'],
       \ 'c' : [':Gcommit -v', 'git commit'],
-      \ 'l' : [':Glog', 'git log'],
       \ 's' : [':Gstatus', 'git status'],
       \ 'd' : {
         \ 'name' : 'diff',
         \ 'd' : [':Gvdiffsplit', 'git diff (vertical)'],
         \ 's' : [':Gdiffsplit', 'git diff (horizontal)'],
+        \ },
+      \ 'l' : {
+        \ 'name' : 'git log',
+        \ 'l' : [':Glog', 'commit history (all)'],
+        \ 'f' : [':Glog! -- %', 'commit history (current file)'],
         \ }
       \ }
 
