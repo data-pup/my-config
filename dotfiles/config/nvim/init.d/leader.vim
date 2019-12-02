@@ -84,6 +84,19 @@ let g:which_key_map.t = {
       \ 'q' : [':tabclose', 'close tab'],
       \ }
 
+" Mark management mappings.
+let g:which_key_map.m = {
+      \ 'name' : 'mark management' ,
+      \ 'a' : [':marks', 'list all marks'],
+      \ 'l' : [':marks abcdefghijklmnopqrstuvwxyz', 'list local marks'],
+      \ 'f' : [':marks ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'list file marks'],
+      \ 'd' : {
+        \ 'd' : [':delmarks!', 'delete all marks for current buffer'],
+        \ 'l' : [':delmarks abcdefghijklmnopqrstuvwxyz', 'delete local marks'],
+        \ 'f' : [':delmarks ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'delete file marks'],
+        \ }
+      \ }
+
 " Display adjustment mappings.
 let g:which_key_map.d = {
       \ 'name' : 'display settings' ,
