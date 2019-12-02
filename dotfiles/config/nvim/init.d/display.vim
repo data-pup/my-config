@@ -42,7 +42,7 @@ set colorcolumn=74,81,101,121
 set laststatus=2
 
 " Try to keep 2 lines above/below the current line in view for context.
-set scrolloff=5
+set scrolloff=2
 
 " Show matching bracket when the cursor has selected a bracket
 set showmatch

@@ -55,9 +55,9 @@ nnoremap `l :vertical resize -5<CR>
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
-    set nornu
+    set norelativenumber
   else
-    set rnu
+    set relativenumber
   endif
 endfunc
 nnoremap <F1> :call NumberToggle()<cr>

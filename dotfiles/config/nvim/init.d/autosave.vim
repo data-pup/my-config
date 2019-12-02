@@ -8,7 +8,6 @@ set noswapfile
 set nobackup
 set writebackup
 
-
 " Reduce time to, e.g., CursorHold event
 set updatetime=300
 
