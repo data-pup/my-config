@@ -64,6 +64,9 @@ ln --force --symbolic \
 ln --force --symbolic \
   $DOTFILE_DIR/zshrc.d/prompt.zsh \
   $HOME/.zshrc.d/prompt.zsh
+ln --force --symbolic \
+  $DOTFILE_DIR/zshrc.d/zsh-git-prompt \
+  $HOME/.zshrc.d/zsh-git-prompt
 
 # Link fish dotfiles into .config subdirectories.
 ln --force --symbolic \

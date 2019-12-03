@@ -47,11 +47,24 @@ function right-section {
 
 # Vim indicator variables.
 vim_ins_color=$pink
-vim_ins_mode="[INS]"
+vim_ins_mode="INS"
 vim_cmd_color=$purple
-vim_cmd_mode="[CMD]"
+vim_cmd_mode="CMD"
 vim_color=$vim_ins_color
 vim_mode=$vim_ins_mode
+
+# Configure git section display settings.
+ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX="%K{$white}%k"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="%K{$white} %k"
+ZSH_THEME_GIT_PROMPT_BRANCH="%K{$white}%B"
+ZSH_THEME_GIT_PROMPT_STAGED="%K{$white}%{$fg[red]%}%{✚%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%K{$white}%{$fg[red]%}%{✖%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%K{$white}%{$fg[blue]%}%{●%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%F{$black}%K{$white}%{↓%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%F{$black}%K{$white}%{↑%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{$black}%K{$white}%{…%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{$black}%K{$white}%{$fg_bold[green]%}%{✔%G%}"
 
 # Use the section function and content variables defined above to wrap
 # section contents with the proper color settings and separators.
@@ -60,15 +73,17 @@ user_host_section=""
 directory_section=""
 vim_indicator_section=""
 shell_info_section=""
+git_section=""
 
 # This function is used to update the contents of sections when the prompt
 # needs to be updated, i.e. after changing modes when using vim mode.
 function update-section-contents {
-  date_time_section="$(left-section "$date_time" "$black" "$white" "$pink")"
-  user_host_section="$(left-section "$user_host" "$white" "$pink" "$purple")"
-  directory_section="$(left-section "$directory" "$white" "$purple" "default")"
-  vim_indicator_section="$(right-section "$vim_mode" "$white" "$vim_color" "default")"
-  shell_info_section="$(right-section "$shell_info" "$black" "$white" "$vim_color")"
+  vim_indicator_section="$(left-section "$vim_mode" "$black" "$white" "$vim_color")"
+  user_host_section="$(left-section "$user_host" "$white" "$vim_color" "$black")"
+  directory_section="$(left-section "$directory" "$white" "$black" "default")"
+  shell_info_section="$(right-section "$shell_info" "$white" "$black" "default")"
+  date_time_section="$(right-section "$date_time" "$black" "$vim_color" "$black")"
+  git_section="$(right-section "$(git_super_status)" "$black" "$white" "$vim_color")"
 }
 update-section-contents # call the function once to initialize the sections.
 
@@ -91,5 +106,5 @@ function zle-line-finish {
 zle -N zle-line-finish
 
 # Finally, place sections in our exported prompt environment variables.
-export PROMPT='${date_time_section}${user_host_section}${directory_section} '
-export RPROMPT='${vim_indicator_section}${shell_info_section}'
+export PROMPT='${vim_indicator_section}${user_host_section}${directory_section} '
+export RPROMPT='${shell_info_section}${date_time_section}${git_section}'

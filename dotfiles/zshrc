@@ -1,10 +1,11 @@
 # Load modules from `zshrc.d`
-source $HOME/.zshrc.d/aliases.zsh          # keybindings
-source $HOME/.zshrc.d/git-aliases.zsh      # git aliases
-source $HOME/.zshrc.d/git-review.zsh       # export git review variable
-source $HOME/.zshrc.d/history-settings.zsh # history size, etc.
-source $HOME/.zshrc.d/keybinding.zsh       # keybindings
-source $HOME/.zshrc.d/prompt.zsh           # personal prompt
+source $HOME/.zshrc.d/aliases.zsh             # keybindings
+source $HOME/.zshrc.d/git-aliases.zsh         # git aliases
+source $HOME/.zshrc.d/git-review.zsh          # export git review variable
+source $HOME/.zshrc.d/history-settings.zsh    # history size, etc.
+source $HOME/.zshrc.d/keybinding.zsh          # keybindings
+source $HOME/.zshrc.d/zsh-git-prompt/zshrc.sh # git info prompt helpers
+source $HOME/.zshrc.d/prompt.zsh              # personal prompt
 
 # NOTE: This must be called *after* keybinding.zsh or the fzf bindings
 # are trampled. No idea why, not going to find out.
