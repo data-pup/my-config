@@ -95,8 +95,8 @@ function update-section-contents {
   ZSH_THEME_GIT_PROMPT_STAGED="%F{green}%K{$white}%{✚%G%}"
   ZSH_THEME_GIT_PROMPT_CONFLICTS="%F{red}%K{$white}%{✖%G%}"
   ZSH_THEME_GIT_PROMPT_CHANGED="%F{red}%K{$white}%{●%G%}"
-  ZSH_THEME_GIT_PROMPT_BEHIND="%F{$black}%K{$white}%{↓%G%}"
-  ZSH_THEME_GIT_PROMPT_AHEAD="%F{$black}%K{$white}%{↑%G%}"
+  ZSH_THEME_GIT_PROMPT_BEHIND="%F{$white}%K{$vim_color}%{↓%G%}"
+  ZSH_THEME_GIT_PROMPT_AHEAD="%F{$white}%K{$vim_color}%{↑%G%}"
   ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{$black}%K{$white}%{…%G%}"
   ZSH_THEME_GIT_PROMPT_CLEAN="%F{$black}%K{$white}%{✔%G%}"
 
