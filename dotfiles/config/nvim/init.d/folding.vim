@@ -1,8 +1,8 @@
 " activate Anyfold for all filetypes
 autocmd Filetype * AnyFoldActivate
 
-" start with all folds closed
-set foldlevel=0
+" start with all folds open
+set foldlevel=99
 
 " Numberic fold level commands
 nnoremap <A-1> :set foldlevel=0<CR>
