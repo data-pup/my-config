@@ -6,6 +6,9 @@ alias cat='bat'
 # Clear screen alias.
 alias cls='clear'
 
+# Whitespace, print empty space between commands.
+alias ws="echo '\n\n\n\n\n\n\n\n'"
+
 # # # Overwrite protections
 # These aliases will send confirmation messages
 # to the user before an overwrite occurs.
