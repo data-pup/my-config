@@ -24,8 +24,26 @@ set smartindent
 " Tab Settings
 set expandtab
 set smarttab
-set softtabstop=2
-set shiftwidth=2
+
+" Whitespace settings
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" allow toggling between local and default mode
+function TabToggle()
+  if &expandtab
+    set shiftwidth=8
+    set softtabstop=0
+    set noexpandtab
+    echo "now using hard tabs..."
+  else
+    set shiftwidth=4
+    set softtabstop=4
+    set expandtab
+    echo "now using soft tabs..."
+  endif
+endfunction
 
 " Show whitespace in files.
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣

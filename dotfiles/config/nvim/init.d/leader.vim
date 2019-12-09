@@ -170,9 +170,10 @@ map <leader>rv :vs<CR>:Ranger<CR>.
 " NOTE: Because these involve strings of commands, we register the names
 " of the mappings separately from the mappings themselves.
 let g:which_key_map['/'] = {
-      \ 'name' : 'highlighting' ,
+      \ 'name' : 'miscellaneous' ,
       \ '/' : 'toggle highlight',
       \ 'w' : 'highlight current word',
+      \ 't' : ['TabToggle()', 'toggle tabs vs. spaces'],
       \ }
 map <leader>// :set hlsearch! hlsearch?<CR>
 map <leader>/w :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
