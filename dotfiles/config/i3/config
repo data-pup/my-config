@@ -36,10 +36,10 @@ bindsym $mod+x kill
 bindsym $mod+m exec rofi -show run
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -74,8 +74,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Cycle through workspaces:
-bindsym $mod+Left workspace prev_on_output
-bindsym $mod+Right workspace next_on_output
+bindsym $mod+k workspace prev_on_output
+bindsym $mod+j workspace next_on_output
 
 # Quick back-and-forth between 2 recently focused workspaces
 bindsym $mod+slash workspace back_and_forth
