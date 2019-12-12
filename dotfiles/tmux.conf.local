@@ -257,9 +257,3 @@ bind C-a send-prefix
 
 # move to last active window with Ctrl+space.
 bind C-space last-window
-
-# move panes with Alt+[hjkl]
-bind -n M-h select-pane -L  # move left
-bind -n M-j select-pane -D  # move down
-bind -n M-k select-pane -U  # move up
-bind -n M-l select-pane -R  # move right

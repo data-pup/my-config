@@ -74,8 +74,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Cycle through workspaces:
-bindsym $mod+k workspace prev_on_output
-bindsym $mod+j workspace next_on_output
+bindsym $mod+h workspace prev_on_output
+bindsym $mod+l workspace next_on_output
 
 # Quick back-and-forth between 2 recently focused workspaces
 bindsym $mod+slash workspace back_and_forth
