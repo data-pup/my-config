@@ -7,13 +7,13 @@ FZF_CTRL_T_OPTS="--no-height --preview-window wrap --preview '
 if [[ -f {} ]]; then
     file --mime {} | grep -q \"text\/.*;\" && bat --color \"always\" {} || (tput setaf 1; file --mime {})
 elif [[ -d {} ]]; then
-    exa --long --color=always {}
+    exa --tree --level 2 --long --header --git --color=always {}
 else;
     tput setaf 1; echo Something went wrong!
 fi'"
 
 # Use `exa` to preview directories when using Alt+c.
-FZF_ALT_C_OPTS="--no-height --preview 'exa --long --color=always {} | head -200'"
+FZF_ALT_C_OPTS="--no-height --preview 'exa --tree --level 2 --long --header --git --color=always {} | head -200'"
 
 is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1
