@@ -79,6 +79,10 @@
 	# NOTE: This uses horizontal diff splits
 	review-one-diff = !vim -p +\"tabdo Gdiffsplit $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
 
+	# Submodule aliases for checking status and updating.
+	sms = submodule status --recursive
+	smu = submodule update --init --recursive
+
 	# Same as `files`, but with a diff stat instead of just names.
 	stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
 
