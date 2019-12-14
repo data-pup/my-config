@@ -19,10 +19,14 @@ alias rm='nocorrect rm -iv'
 alias mkdir='nocorrect mkdir'
 alias man='nocorrect man'
 
-# ls aliases
+# exa aliases
+alias lsl="exa --long --header --git"
+alias lst="exa --tree --level 2 --long --header --git"
 alias lsa="ls -a"
 alias lsl="ls -l"
 alias ls1="ls -1"
+alias lsls="exa --tree --level 2 --long --header --git --color=always | less -R"
+alias lsla="exa --tree --level 4 --long --header --git --color=always | less -R"
 
 # # # # # Process status aliases # # # # #
 # These commands will print the processes using the most memory.

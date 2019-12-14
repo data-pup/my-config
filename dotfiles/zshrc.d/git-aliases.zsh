@@ -1,11 +1,20 @@
-# Git Aliases.
-alias gs='git status'
-alias gits='git status'
-alias gitss='git status --short'
-alias gitsv='git status -vv'
-alias gitsvl='git status -vv | less'
-alias gitdc='git diff --cached'
-alias gitbv='git branch -vv'
+# # # Git Aliases.
 
-# Watch Aliases.
-alias watchgs='watch -n 10 --color git -c color.status=always status --short'
+alias ga="git add -p"
+
+alias gbv="git branch -vv"
+
+alias gcb="git checkout -b"
+alias gco="git checkout -p"
+
+alias gcv="git commit -v"
+
+alias gd="git diff"
+alias gdc="git diff --cached"
+
+alias gl="git log-graph"
+alias gla="git log-graph-branches"
+alias gls="git log-stat"
+
+alias gs="git status --short"
+alias gsv="git status -vv"
