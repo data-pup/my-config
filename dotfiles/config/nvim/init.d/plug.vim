@@ -39,6 +39,9 @@ Plug 'rbgrouleff/bclose.vim'
 " Signify - VSC changes.
 Plug 'mhinz/vim-signify'
 
+" Surround - Surrounding pair commands.
+Plug 'tpope/vim-surround'
+
 " Tagbar - class outline viewer.
 Plug 'majutsushi/tagbar'
 
