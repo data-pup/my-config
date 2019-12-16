@@ -7,7 +7,8 @@ alias cat='bat'
 alias cls='clear'
 
 # Whitespace, print empty space between commands.
-alias ws="echo '\n\n\n\n\n\n\n\n'"
+# NOTE: We use `ww` rather `ws` because it's easier to type.
+alias ww="echo '\n\n\n\n\n\n\n\n'"
 
 # # # Overwrite protections
 # These aliases will send confirmation messages
