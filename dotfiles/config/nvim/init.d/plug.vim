@@ -45,6 +45,9 @@ Plug 'tpope/vim-surround'
 " Tagbar - class outline viewer.
 Plug 'majutsushi/tagbar'
 
+" TOML support.
+Plug 'cespare/vim-toml'
+
 " TypeScript support.
 Plug 'leafgarland/typescript-vim'
 
