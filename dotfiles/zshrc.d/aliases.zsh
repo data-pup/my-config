@@ -3,6 +3,9 @@ alias vim='nvim'
 alias ls='exa'
 alias cat='bat'
 
+# Create a new tmux session named after the current directory.
+alias tnew='tmux new -s "$(basename $(pwd) | sed "s/^[./]//")"'
+
 # Clear screen alias.
 alias cls='clear'
 
