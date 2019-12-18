@@ -83,5 +83,18 @@ bind-git-helper() {
 bind-git-helper f b t r h
 unset -f bind-git-helper
 
+# Tmux switching with fzf
+# Use FZF to switch Tmux sessions:
+# bind-key s run "tmux new-window 'zsh -ci tmux-fzf-switch'"
+tmux-fzf-switch() {
+    local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
+    { tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
+        | awk '!seen[$1]++' \
+        | column -t -s'|' \
+        | fzf -q '$' --reverse --prompt 'switch session: ' -1 \
+        | cut -d':' -f1 \
+        | xargs tmux switch-client -t
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.fzf/shell/key-bindings.zsh
