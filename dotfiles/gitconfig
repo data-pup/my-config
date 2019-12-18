@@ -33,6 +33,12 @@
 	new = green bold
 	whitespace = red reverse
 [alias]
+	# Fetch changes from the upstream remote.
+	fpu = !git fetch -p upstream
+
+	# Fetch changes from the upstream remote.
+	fpu = !git fetch -p origin
+
 	# Open a new vim instance with a fugitive window open.
 	fugitive-status = !vim -c "G" +\"tabdo NERDTreeToggle\"
 
