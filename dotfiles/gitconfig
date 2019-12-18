@@ -37,7 +37,7 @@
 	fpu = !git fetch -p upstream
 
 	# Fetch changes from the upstream remote.
-	fpu = !git fetch -p origin
+	fpo = !git fetch -p origin
 
 	# Open a new vim instance with a fugitive window open.
 	gfg = !vim -c "G"
