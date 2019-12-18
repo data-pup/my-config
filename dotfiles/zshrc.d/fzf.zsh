@@ -8,7 +8,7 @@ if [[ -f {} ]]; then
     file --mime {} | grep -q \"text\/.*;\" && bat --color \"always\" {} || (tput setaf 1; file --mime {})
 elif [[ -d {} ]]; then
     exa --tree --level 2 --long --header --git --color=always {}
-else;
+else
     tput setaf 1; echo Something went wrong!
 fi'"
 
