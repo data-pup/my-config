@@ -40,7 +40,8 @@
 	fpu = !git fetch -p origin
 
 	# Open a new vim instance with a fugitive window open.
-	fugitive-status = !vim -c "G" +\"tabdo NERDTreeToggle\"
+	gfg = !vim -c "G"
+	fugitive-status = !vim -c "G"
 
 	# Open a new vim instance showing the git log, using fugitive.
 	fugitive-log = !vim -c "Glog"
