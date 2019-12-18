@@ -174,9 +174,11 @@ let g:which_key_map['/'] = {
       \ '/' : 'toggle highlight',
       \ 'w' : 'highlight current word',
       \ 't' : ['TabToggle()', 'toggle tabs vs. spaces'],
+      \ 'c' : 'copy path of current file',
       \ }
 map <leader>// :set hlsearch! hlsearch?<CR>
 map <leader>/w :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+map <leader>/c :let @+ = expand("%")<CR>
 
 " visual search with vim-over with Leader+fr
 " NOTE: Because these involve strings of commands, we register the names
