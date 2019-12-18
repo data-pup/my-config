@@ -3,7 +3,7 @@ FZF_DEFAULT_COMMAND="fd --hidden"
 
 # If current selection is a text file shows its content,
 # if it's a directory shows its content, the rest is ignored
-FZF_CTRL_T_OPTS="--no-height --preview-window wrap --preview '
+FZF_CTRL_T_OPTS="--height ${FZF_TMUX_HEIGHT:-60%} --preview-window wrap --preview '
 if [[ -f {} ]]; then
     file --mime {} | grep -q \"text\/.*;\" && bat --color \"always\" {} || (tput setaf 1; file --mime {})
 elif [[ -d {} ]]; then
@@ -13,14 +13,14 @@ else
 fi'"
 
 # Use `exa` to preview directories when using Alt+c.
-FZF_ALT_C_OPTS="--no-height --preview 'exa --tree --level 2 --long --header --git --color=always {} | head -200'"
+FZF_ALT_C_OPTS="--height ${FZF_TMUX_HEIGHT:-60%} --preview 'exa --tree --level 2 --long --header --git --color=always {} | head -200'"
 
 is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1
 }
 
 fzf-down() {
-  fzf --height 50% "$@" --border
+  fzf --height 60% "$@" --border
 }
 
 gf() {
