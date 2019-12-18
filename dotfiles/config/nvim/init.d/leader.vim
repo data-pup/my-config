@@ -91,6 +91,7 @@ let g:which_key_map.m = {
       \ 'l' : [':marks abcdefghijklmnopqrstuvwxyz', 'list local marks'],
       \ 'f' : [':marks ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'list file marks'],
       \ 'd' : {
+        \ 'name' : 'delete marks',
         \ 'd' : [':delmarks!', 'delete all marks for current buffer'],
         \ 'l' : [':delmarks abcdefghijklmnopqrstuvwxyz', 'delete local marks'],
         \ 'f' : [':delmarks ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'delete file marks'],
