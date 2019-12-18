@@ -16,5 +16,7 @@ alias gl="git log-graph"
 alias gla="git log-graph-branches"
 alias gls="git log-stat"
 
+alias gpo="git push origin"
+
 alias gs="git status --short"
 alias gsv="git status -vv"
