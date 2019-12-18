@@ -174,11 +174,16 @@ let g:which_key_map['/'] = {
       \ '/' : 'toggle highlight',
       \ 'w' : 'highlight current word',
       \ 't' : ['TabToggle()', 'toggle tabs vs. spaces'],
-      \ 'c' : 'copy path of current file',
+      \ 'c' : {
+        \ 'name': 'copy path to current buffer',
+        \ 'n' : 'copy name of current buffer',
+        \ 'l' : 'copy name of current buffer (with line number)',
+        \ },
       \ }
 map <leader>// :set hlsearch! hlsearch?<CR>
 map <leader>/w :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
-map <leader>/c :let @+ = expand("%")<CR>
+map <leader>/cn :let @+ = expand("%")<CR>
+nnoremap <leader>/cl :let @+=expand("%") . ':' . line(".")<CR>
 
 " visual search with vim-over with Leader+fr
 " NOTE: Because these involve strings of commands, we register the names
