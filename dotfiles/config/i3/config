@@ -170,9 +170,9 @@ bar {
 
         colors {
             background #3A374D
-            focused_workspace #C5A3FF #FFB8D1 #F8F8F2
+            focused_workspace #3A374D #716799 #FFB8D1
             active_workspace #C5A3FF #C5A3FF #F8F8F2
-            inactive_workspace #C5A3FF #716799 #F8F8F2
+            inactive_workspace #3A374D #716799 #C5A3FF
             urgent_workspace #FFF352 #FFF352 #F8F8F2
         }
 }
