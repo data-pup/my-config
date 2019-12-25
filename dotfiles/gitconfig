@@ -4,7 +4,9 @@
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	# Trying a new pager for now...
+	# pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta --theme="fairyfloss" --minus-color="#8c5e7e" --plus-color="#5b8565"
 [diff]
 	tool = vimdiff
 [difftool]
