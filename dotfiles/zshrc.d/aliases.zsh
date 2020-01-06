@@ -27,7 +27,6 @@ alias man='nocorrect man'
 alias lsl="exa --long --header --git"
 alias lst="exa --tree --level 2 --long --header --git"
 alias lsa="ls -a"
-alias lsl="ls -l"
 alias ls1="ls -1"
 alias lsls="exa --tree --level 2 --long --header --git --color=always | less -R"
 alias lsla="exa --tree --level 4 --long --header --git --color=always | less -R"
