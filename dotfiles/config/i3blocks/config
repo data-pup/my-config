@@ -25,7 +25,7 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=/usr/share/i3blocks/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=10
 markup=none
 color=#C5A3FF
 
@@ -45,12 +45,12 @@ color=#C5A3FF
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM:
+label=MEM
 separator=false
 interval=30
 
 [memory]
-label=SWAP:
+label=SWP
 instance=swap
 separator=true
 interval=30
@@ -70,7 +70,7 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-label=IP:
+label=IP
 #instance=wlan0
 color=#FFB8D1
 interval=10
@@ -83,7 +83,7 @@ separator=false
 
 [bandwidth]
 color=#FFB8D1
-label=NET:
+label=NET
 #instance=eth0
 interval=5
 
@@ -103,19 +103,11 @@ interval=5
 # label=LOAD AVG:
 # interval=10
 
-# Date Time
-#
-[time]
-command=date '+%Y-%m-%d'
-label=DATE:
-color=#F8F8F2
-interval=5
-
-# Date Time
+# Local Time
 #
 [local-time]
 command=date '+%H:%M:%S'
-label=LOCAL:
+label=LOC
 color=#F8F8F2
 interval=5
 
@@ -123,7 +115,15 @@ interval=5
 #
 [uct-time]
 command=date --utc '+%H:%M:%S'
-label=UTC:
+label=UTC
+color=#F8F8F2
+interval=5
+
+# Day
+#
+[time]
+command=date '+%Y-%m-%d'
+label=DAY
 color=#F8F8F2
 interval=5
 
@@ -155,7 +155,7 @@ interval=5
 #
 # The battery instance defaults to 0.
 [battery]
-label=BAT:
+label=BAT
 color=#E6C000
 #label=⚡
 #instance=1
