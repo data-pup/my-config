@@ -106,8 +106,9 @@ let g:which_key_map.d = {
       \ 'w' : [':set list!', 'toggle whitespace characters'],
       \ 'c' : {
         \ 'name' : 'ruler columns',
-        \ '[' : [':set colorcolumn=74,81,101,121', 'show rulers'],
-        \ ']' : [':set colorcolumn=', 'hide rulers'],
+        \ 'a' : [':set colorcolumn=74,81,101,121', 'all rulers'],
+        \ 's' : [':set colorcolumn=81,121', 'some rulers'],
+        \ 'h' : [':set colorcolumn=', 'hide rulers'],
         \ }
       \ }
 
