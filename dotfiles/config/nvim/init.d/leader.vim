@@ -108,6 +108,7 @@ let g:which_key_map.d = {
         \ 'name' : 'ruler columns',
         \ 'a' : [':set colorcolumn=74,81,101,121', 'all rulers'],
         \ 's' : [':set colorcolumn=81,121', 'some rulers'],
+        \ 'r' : [':set colorcolumn=101,121', 'rust rulers'],
         \ 'h' : [':set colorcolumn=', 'hide rulers'],
         \ }
       \ }
