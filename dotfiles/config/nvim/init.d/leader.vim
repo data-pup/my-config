@@ -123,6 +123,11 @@ let g:which_key_map.g = {
         \ 'name' : 'diff',
         \ 'd' : [':Gvdiffsplit', 'git diff (vertical)'],
         \ 's' : [':Gdiffsplit', 'git diff (horizontal)'],
+        \ 'm' : {
+          \ 'name' : 'diff against master',
+            \ 'd' : [':Gvdiffsplit master', 'git diff (vertical)'],
+            \ 's' : [':Gdiffsplit master', 'git diff (horizontal)'],
+            \ },
         \ },
       \ 'l' : {
         \ 'name' : 'git log',
