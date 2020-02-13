@@ -58,8 +58,11 @@
 	# Show the commit history in graph form for the current branch.
 	log-graph-branches = !git log --graph --decorate --pretty=oneline --branches
 
-	# Show stats for commits unique to this branch since the merge base.
+	# Show stats for commits unique to this branch since the merge base, with stats.
 	log-stat = !git log --decorate --pretty=oneline --stat $REVIEW_BASE..HEAD
+
+	# Show stats for commits unique to this branch since the merge base, without stats.
+	log-branch = !git log --decorate --pretty=oneline $REVIEW_BASE..HEAD
 
 	# Interatively rebase the commits on this branch since the merge base.
 	rebase-branch = !git rebase --interactive $(git merge-base HEAD \"$REVIEW_BASE\")
@@ -95,11 +98,14 @@
 	# Same as `files`, but with a diff stat instead of just names.
 	stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
 
-	# Watch git status.
-	watch-status = !watch -n 10 --color git -c color.status=always status --short
-
 	# Watch unstaged changes.
 	watch-diff = !watch --color -n 5 git diff --color=always --stat
 
 	# Watch staged changes.
 	watch-diff-cached = !watch --color -n 5 git diff --color=always --stat --cached
+
+	# Watch git log.
+	watch-log = !watch --color -n 20 git log --oneline --decorate --graph --color=always
+
+	# Watch git status.
+	watch-status = !watch -n 10 --color git -c color.status=always status --short
