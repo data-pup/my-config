@@ -159,6 +159,16 @@ let g:which_key_map[';'] = {
         \ }
       \ }
 
+" Zen mode mappings.
+" FIXME: This is messy, but I want to see if I like you first. (it's casual)
+let g:limelight_conceal_guifg = '#a8a4b1'
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 1
+nnoremap <Leader>, :Goyo<CR>
+let g:which_key_map[','] = 'zen mode'
+
 " Ranger mappings.
 " NOTE: Because these involve strings of commands, we register the names
 " of the mappings separately from the mappings themselves.

@@ -54,4 +54,8 @@ Plug 'leafgarland/typescript-vim'
 " Which Key - show keybindings in popup.
 Plug 'liuchengxu/vim-which-key'
 
+" Goyo/Limelight - zen display mode
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 call plug#end()
