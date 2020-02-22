@@ -53,16 +53,20 @@
 	files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
 
 	# Show the commit history in graph form for the current branch.
-	log-graph = !git log --graph --decorate --pretty=oneline
+	log-graph = !git log --graph --decorate \
+		--pretty=format:'%C(bold yellow)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(magenta)(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
 
-	# Show the commit history in graph form for the current branch.
-	log-graph-branches = !git log --graph --decorate --pretty=oneline --branches
+	# Show the commit history in graph form for the multiple branches.
+	log-graph-branches = !git log --graph --decorate --branches \
+		--pretty=format:'%C(bold yellow)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(magenta)(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
 
 	# Show stats for commits unique to this branch since the merge base, with stats.
-	log-stat = !git log --decorate --pretty=oneline --stat $REVIEW_BASE..HEAD
+	log-stat = !git log --decorate --stat $REVIEW_BASE..HEAD \
+		--pretty=format:'%C(bold yellow)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(magenta)(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
 
 	# Show stats for commits unique to this branch since the merge base, without stats.
-	log-branch = !git log --decorate --pretty=oneline $REVIEW_BASE..HEAD
+	log-branch = !git log --decorate $REVIEW_BASE..HEAD \
+		--pretty=format:'%C(bold yellow)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(magenta)(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
 
 	# Interatively rebase the commits on this branch since the merge base.
 	rebase-branch = !git rebase --interactive $(git merge-base HEAD \"$REVIEW_BASE\")
