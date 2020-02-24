@@ -162,10 +162,30 @@ let g:which_key_map[';'] = {
 " Zen mode mappings.
 " FIXME: This is messy, but I want to see if I like you first. (it's casual)
 let g:limelight_conceal_guifg = '#a8a4b1'
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-" Number of preceding/following paragraphs to include (default: 0)
-let g:limelight_paragraph_span = 1
+let g:goyo_width = 120
+function! s:goyo_enter()
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+    set noshowmode
+    set noshowcmd
+    set scrolloff=999
+    Limelight
+    set cursorline! cursorcolumn!
+endfunction
+
+function! s:goyo_leave()
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+    set showmode
+    set showcmd
+    set scrolloff=5
+    Limelight!
+    set cursorline cursorcolumn
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+let g:limelight_paragraph_span = 0
 nnoremap <Leader>, :Goyo<CR>
 let g:which_key_map[','] = 'zen mode'
 
