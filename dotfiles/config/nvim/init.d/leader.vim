@@ -104,14 +104,25 @@ let g:which_key_map.d = {
       \ 'l' : [':call NumberToggle()', 'toggle relative line numbers'],
       \ 'n' : [':NERDTreeToggle', 'toggle NERDTree'],
       \ 'w' : [':set list!', 'toggle whitespace characters'],
-      \ 'c' : {
+      \ 'r' : {
         \ 'name' : 'ruler columns',
         \ 'a' : [':set colorcolumn=74,81,101,121', 'all rulers'],
         \ 's' : [':set colorcolumn=81,121', 'some rulers'],
         \ 'r' : [':set colorcolumn=101,121', 'rust rulers'],
         \ 'h' : [':set colorcolumn=', 'hide rulers'],
-        \ }
+        \ },
+      \ 'c' : {
+        \ 'name' : 'cursor highlight',
+        \ 'a' : ['set cursorline cursorcolumn', 'all (line and column)'],
+        \ 'l' : ['set cursorline cursorcolumn!', 'line only'],
+        \ 'h' : ['set cursorline! cursorcolumn!', 'hide rulers'],
+        \ },
+      \ 'h' : {
+        \ 'name' : 'local syntax highlight',
+        \ '[' : ['Limelight', 'enable'],
+        \ ']' : ['Limelight!', 'disable'],
       \ }
+  \ }
 
 " Git bindings.
 let g:which_key_map.g = {

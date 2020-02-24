@@ -18,8 +18,8 @@ let g:ale_fixers = {
 " Run fixers (formatting) on save.
 let g:ale_fix_on_save = 1
 
-" Open a window displaying errors if any exist.
-let g:ale_open_list = 1
+" Do not automatically open an error window. (we have a leader mapping.)
+let g:ale_open_list = 0
 
 " Enable ALE completion, set completion maximum suggestion count.
 let g:ale_completion_enabled = 1
