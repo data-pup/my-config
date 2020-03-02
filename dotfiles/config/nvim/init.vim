@@ -24,3 +24,10 @@ source $HOME/.config/nvim/init.d/better_o.vim
 source $HOME/.config/nvim/init.d/autosave.vim
 " Empty guicursor
 source $HOME/.config/nvim/init.d/empty-guicursor.vim
+
+" ----- Temporary: Cursor Highlight Only In Current Buffer -----
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+    au WinLeave * setlocal nocursorline nocursorcolumn
+augroup END
