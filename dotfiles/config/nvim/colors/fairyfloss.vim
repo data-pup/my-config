@@ -11,10 +11,10 @@ endif
 let g:colors_name = 'fairyfloss'
 
 " If we would like an opaque background:
-" hi Normal guifg=#f8f8f0 guibg=#5a5475 gui=NONE
+hi Normal guifg=#f8f8f0 guibg=#5a5475 gui=NONE
 
 " Transparent background:
-hi Normal guifg=#f8f8f0 guibg=NONE ctermbg=NONE
+" hi Normal guifg=#f8f8f0 guibg=NONE ctermbg=NONE
 
 " hi NormalNC
 
@@ -66,9 +66,9 @@ hi PmenuSel guifg=fg guibg=#ffb8d1 gui=bold
 
 "hi Cursor
 "hi CursorIM
-hi CursorColumn guifg=NONE guibg=#716799 gui=NONE
+hi CursorColumn guifg=NONE guibg=#585B80 gui=NONE
 hi! link CursorLine CursorColumn
-hi CursorLineNr guifg=#c5a3ff guibg=#716799 gui=bold " fg is not defined on the original theme. It was taken using Digital Color Meter
+hi CursorLineNr guifg=#c5a3ff guibg=#585B80 gui=bold " fg is not defined on the original theme. It was taken using Digital Color Meter
 
 " }}}
 
