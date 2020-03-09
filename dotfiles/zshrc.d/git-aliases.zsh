@@ -19,4 +19,5 @@ alias gls="git log-stat"
 alias gpo="git push origin"
 
 alias gs="git status --short"
+alias gss="git status"
 alias gsv="git status -vv"
