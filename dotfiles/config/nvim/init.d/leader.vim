@@ -40,10 +40,14 @@ let g:which_key_map.k = 'previous buffer'
 nnoremap <Leader>j :bnext<cr>
 let g:which_key_map.j = 'next buffer'
 
+" Zen mode mappings.
+nnoremap <Leader>, :Goyo<CR>
+let g:which_key_map[','] = 'zen mode'
+
 " Open files using the fuzzy finding commands defined in `fzf.vim`.
 let g:which_key_map.o = {
-      \ 'name' : 'open file' ,
-      \ 'o' : [':Gfp', 'search by name'],
+      \ 'name' : 'open file via search' ,
+      \ 'o' : [':Gfp', 'search by file name'],
       \ 'r' : [':Rg!', 'search by regex'],
       \ }
 
@@ -147,36 +151,12 @@ let g:which_key_map.g = {
         \ }
       \ }
 
-" FIXME: We are trying out COC. Let's keep these here for now as a reference.
-" " Language support mappings via ALE.
-" let g:which_key_map[';'] = {
-      " \ 'name' : 'IDE nonsense' ,
-      " \ ';' : ['<Plug>(ale_next_wrap)', 'next error'],
-      " \ '[' : [':lopen', 'open location list'],
-      " \ ']' : [':lclose', 'close location list'],
-      " \ 'j' : ['<Plug>(ale_next_wrap)', 'next error'],
-      " \ 'k' : ['<Plug>(ale_previous_wrap)', 'previous error'],
-      " \ 'r' : [':ALERename', 'rename symbol'],
-      " \ 'd' : ['<Plug>(ale_detail)', 'error detail'],
-      " \ 'h' : ['<Plug>(ale_hover)', 'get hover information'],
-      " \ 'g' : {
-        " \ 'name' : 'go to',
-        " \ 'd' : ['<Plug>(ale_go_to_definition)', 'definition'],
-        " \ 't' : ['<Plug>(ale_go_to_definition_in_tab)', 'definition in tab'],
-        " \ 'v' : ['<Plug>(ale_go_to_definition_in_vsplit)', 'definition in vertical split'],
-        " \ },
-      " \ 'f' : {
-        " \ 'name' : 'find',
-        " \ 'r' : ['<Plug>(ale_find_references)', 'references'],
-        " \ }
-      " \ }
-
 let g:which_key_map[';'] = {
     \ 'name' : 'IDE nonsense' ,
-    \ ';' : [':CocList --auto-preview --interactive --tab --top symbols', 'symbols'],
+    \ ';' : ['Symbols', 'symbols'],
     \ '[' : [':lopen', 'open location list'],
     \ ']' : [':lclose', 'close location list'],
-    \ 'd' : [':CocList --auto-preview --tab --top diagnostics', 'diagnostics'],
+    \ 'd' : ['Diagnostics', 'diagnostics'],
     \ 'j': ['<Plug>(coc-diagnostic-next)', 'next error'],
     \ 'k': ['<Plug>(coc-diagnostic-prev)', 'prev error'],
     \ 'g' : {
@@ -184,40 +164,11 @@ let g:which_key_map[';'] = {
         \ 'd': ['<Plug>(coc-definition)', 'definition'],
         \ 'y': ['<Plug>(coc-type-definition)', 'type'],
         \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
+        \ 'r': ['<Plug>(coc-references)', 'references'],
         \ },
-    \ 'r': ['<Plug>(coc-references)', 'references'],
+    \ 'r': ['<Plug>(coc-rename)', 'rename'],
     \ 't': ['TagbarToggle', 'tagbar']
     \ }
-
-" Zen mode mappings.
-" FIXME: This is messy, but I want to see if I like you first. (it's casual)
-let g:limelight_conceal_guifg = '#a8a4b1'
-let g:goyo_width = 120
-function! s:goyo_enter()
-    silent !tmux set status off
-    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
-    set noshowmode
-    set noshowcmd
-    set scrolloff=999
-    Limelight
-    set cursorline! cursorcolumn!
-endfunction
-
-function! s:goyo_leave()
-    silent !tmux set status on
-    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
-    set showmode
-    set showcmd
-    set scrolloff=5
-    Limelight!
-    set cursorline cursorcolumn
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-let g:limelight_paragraph_span = 0
-nnoremap <Leader>, :Goyo<CR>
-let g:which_key_map[','] = 'zen mode'
 
 " Ranger mappings.
 " NOTE: Because these involve strings of commands, we register the names

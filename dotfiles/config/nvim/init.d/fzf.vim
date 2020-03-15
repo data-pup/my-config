@@ -1,3 +1,8 @@
+" fzf.vim Helper Functions:
+"
+" Use :Rg to search file contents.
+" Use :Gfp to search file names.
+
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
     \ 'rg --column --no-heading --line-number --color=always

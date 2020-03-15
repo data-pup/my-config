@@ -4,7 +4,7 @@ source $HOME/.config/nvim/init.d/plug.vim
 
 " ----- Load neovim config modules -----
 
-" Helper functions
+" Helper functions (these are referenced throughout other modules)
 source $HOME/.config/nvim/init.d/helpers.vim
 
 " Display settings (theme, line numbering, etc.)
@@ -29,10 +29,3 @@ source $HOME/.config/nvim/init.d/autosave.vim
 source $HOME/.config/nvim/init.d/empty-guicursor.vim
 " Zen mode (goyo & limelight)
 source $HOME/.config/nvim/init.d/zen.vim
-
-" ----- Temporary: Cursor Highlight Only In Current Buffer -----
-augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
-    au WinLeave * setlocal nocursorline nocursorcolumn
-augroup END

@@ -33,28 +33,24 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '¶'
 
-" Line numbering settings
-set number
-set relativenumber
+set colorcolumn=81 " Mark the 80th column by default.
+set signcolumn=yes " Always show the signcolumn (errors, warnings, git changes)
+set laststatus=2   " Always show the status line.
+set scrolloff=2    " Keep 2 lines above/below the current line in view.
+set showmatch      " Highlight matching bracket.
+set number relativenumber " Show line numbers, with relative numbering.
+
+" Misc.
 set ruler
 set nowrap
 
-" Mark the 80 char column
+" Highlight the cursor's line and column, only in the current pane.
 set cursorline cursorcolumn
-set colorcolumn=81
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-set signcolumn=yes
-
-" Always show the status line
-set laststatus=2
-
-" Try to keep 2 lines above/below the current line in view for context.
-set scrolloff=2
-
-" Show matching bracket when the cursor has selected a bracket
-set showmatch
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+    au WinLeave * setlocal nocursorline nocursorcolumn
+augroup END
 
 " Flag problematic whitespace (trailing spaces, spaces before tabs).
 highlight BadWhitespace term=standout ctermbg=red guibg=red

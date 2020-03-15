@@ -2,9 +2,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Airline - statusline plugin.
 Plug 'vim-airline/vim-airline'
-" NOTE: For now, using a handrolled variation of the fairyfloss theme.
-" This will be removed at some point, keeping it here for now.
-" Plug 'vim-airline/vim-airline-themes'
 
 " ALE (Asynchronous Linting Engine) - Autoformatting, misc. language support.
 Plug 'w0rp/ale'
@@ -14,9 +11,6 @@ Plug 'pseewald/vim-anyfold'
 
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Deoplete - asynchronous completion.
-Plug 'Shougo/deoplete.nvim'
 
 " Fugitive/Rhubarb - git wrapper, plus GitHub extensions.
 Plug 'tpope/vim-fugitive'
