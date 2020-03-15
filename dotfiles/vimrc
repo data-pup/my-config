@@ -67,7 +67,6 @@ set laststatus=2
 set directory=~/.vim/swp
 
 
-
 " Whitespace And Indentation Configuration Settings:
 " ----------------------------------
 
@@ -137,8 +136,6 @@ vnoremap <Down> gj
 " Try to keep 2 lines above/below the current line in view for context.
 set scrolloff=5
 
-
-
 " Miscellaneous Configuration Settings:
 " -------------------------------------
 
@@ -154,22 +151,3 @@ endif
 " Tab completion
 set wildmenu
 set wildmode=list:longest,full
-
-
-
-" Plugin Configuration Settings:
-" ------------------------------
-
-" Stick this in your vimrc to open NERDTree with `Ctrl+n`
-map <C-n> :NERDTreeToggle<CR>
-
-" Syntactic settings
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Syntastic error symbols
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-

@@ -147,28 +147,47 @@ let g:which_key_map.g = {
         \ }
       \ }
 
-" Language support mappings via ALE.
+" FIXME: We are trying out COC. Let's keep these here for now as a reference.
+" " Language support mappings via ALE.
+" let g:which_key_map[';'] = {
+      " \ 'name' : 'IDE nonsense' ,
+      " \ ';' : ['<Plug>(ale_next_wrap)', 'next error'],
+      " \ '[' : [':lopen', 'open location list'],
+      " \ ']' : [':lclose', 'close location list'],
+      " \ 'j' : ['<Plug>(ale_next_wrap)', 'next error'],
+      " \ 'k' : ['<Plug>(ale_previous_wrap)', 'previous error'],
+      " \ 'r' : [':ALERename', 'rename symbol'],
+      " \ 'd' : ['<Plug>(ale_detail)', 'error detail'],
+      " \ 'h' : ['<Plug>(ale_hover)', 'get hover information'],
+      " \ 'g' : {
+        " \ 'name' : 'go to',
+        " \ 'd' : ['<Plug>(ale_go_to_definition)', 'definition'],
+        " \ 't' : ['<Plug>(ale_go_to_definition_in_tab)', 'definition in tab'],
+        " \ 'v' : ['<Plug>(ale_go_to_definition_in_vsplit)', 'definition in vertical split'],
+        " \ },
+      " \ 'f' : {
+        " \ 'name' : 'find',
+        " \ 'r' : ['<Plug>(ale_find_references)', 'references'],
+        " \ }
+      " \ }
+
 let g:which_key_map[';'] = {
-      \ 'name' : 'IDE nonsense' ,
-      \ ';' : ['<Plug>(ale_next_wrap)', 'next error'],
-      \ '[' : [':lopen', 'open location list'],
-      \ ']' : [':lclose', 'close location list'],
-      \ 'j' : ['<Plug>(ale_next_wrap)', 'next error'],
-      \ 'k' : ['<Plug>(ale_previous_wrap)', 'previous error'],
-      \ 'r' : [':ALERename', 'rename symbol'],
-      \ 'd' : ['<Plug>(ale_detail)', 'error detail'],
-      \ 'h' : ['<Plug>(ale_hover)', 'get hover information'],
-      \ 'g' : {
+    \ 'name' : 'IDE nonsense' ,
+    \ ';' : [':CocList --auto-preview --interactive --tab --top symbols', 'symbols'],
+    \ '[' : [':lopen', 'open location list'],
+    \ ']' : [':lclose', 'close location list'],
+    \ 'd' : [':CocList --auto-preview --tab --top diagnostics', 'diagnostics'],
+    \ 'j': ['<Plug>(coc-diagnostic-next)', 'next error'],
+    \ 'k': ['<Plug>(coc-diagnostic-prev)', 'prev error'],
+    \ 'g' : {
         \ 'name' : 'go to',
-        \ 'd' : ['<Plug>(ale_go_to_definition)', 'definition'],
-        \ 't' : ['<Plug>(ale_go_to_definition_in_tab)', 'definition in tab'],
-        \ 'v' : ['<Plug>(ale_go_to_definition_in_vsplit)', 'definition in vertical split'],
+        \ 'd': ['<Plug>(coc-definition)', 'definition'],
+        \ 'y': ['<Plug>(coc-type-definition)', 'type'],
+        \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
         \ },
-      \ 'f' : {
-        \ 'name' : 'find',
-        \ 'r' : ['<Plug>(ale_find_references)', 'references'],
-        \ }
-      \ }
+    \ 'r': ['<Plug>(coc-references)', 'references'],
+    \ 't': ['TagbarToggle', 'tagbar']
+    \ }
 
 " Zen mode mappings.
 " FIXME: This is messy, but I want to see if I like you first. (it's casual)

@@ -6,11 +6,11 @@ Plug 'vim-airline/vim-airline'
 " This will be removed at some point, keeping it here for now.
 " Plug 'vim-airline/vim-airline-themes'
 
-" ALE - Asynchronous Linting Engine
-Plug 'w0rp/ale'
-
 " Anyfold - Generic folding
 Plug 'pseewald/vim-anyfold'
+
+" Use release branch (Recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Deoplete - asynchronous completion.
 Plug 'Shougo/deoplete.nvim'

@@ -14,6 +14,11 @@ let g:airline#extensions#tabline#enabled = 1 " Tabline
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_skip_empty_sections = 1
 
+let airline#extensions#coc#error_symbol = 'Error:'
+let airline#extensions#coc#warning_symbol = 'Warning:'
+let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
+let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
+
 " " Initialize airline symbols dictionary.
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -37,6 +42,10 @@ set nowrap
 " Mark the 80 char column
 set cursorline cursorcolumn
 set colorcolumn=81
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
 
 " Always show the status line
 set laststatus=2
