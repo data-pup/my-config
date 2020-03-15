@@ -99,30 +99,32 @@ ln --force --symbolic \
 ln --force --symbolic $CONFIG_DIR/htop/htoprc $HOME/.config/htop/htoprc
 
 # Link i3 config files.
-ln --force --symbolic $CONFIG_DIR/i3/config $HOME/.config/i3/config
-ln --force --symbolic $CONFIG_DIR/i3blocks/config $HOME/.config/i3blocks/config
+ln --force --symbolic $CONFIG_DIR/i3/config         $HOME/.config/i3/config
+ln --force --symbolic $CONFIG_DIR/i3blocks/config   $HOME/.config/i3blocks/config
 
 # Link neovim config files. (It's a lot, I know)
-ln --force --symbolic $CONFIG_DIR/nvim/init.vim $HOME/.config/nvim/init.vim
-ln --force --symbolic $CONFIG_DIR/nvim/autoload/airline/themes/fairyfloss.vim $HOME/.config/nvim/autoload/airline/themes/fairyfloss.vim
-ln --force --symbolic $CONFIG_DIR/nvim/ftdetect/vtc.vim $HOME/.config/nvim/ftdetect/vtc.vim
-ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/tsx.vim $HOME/.config/nvim/ftplugin/tsx.vim
-ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/rust.vim $HOME/.config/nvim/ftplugin/rust.vim
-ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/javascript.vim $HOME/.config/nvim/ftplugin/javascript.vim
-ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/typescript.vim $HOME/.config/nvim/ftplugin/typescript.vim
-ln --force --symbolic $CONFIG_DIR/nvim/colors/fairyfloss.vim $HOME/.config/nvim/colors/fairyfloss.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/better_o.vim $HOME/.config/nvim/init.d/better_o.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/display.vim $HOME/.config/nvim/init.d/display.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/misc.vim $HOME/.config/nvim/init.d/misc.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/leader.vim $HOME/.config/nvim/init.d/leader.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/folding.vim $HOME/.config/nvim/init.d/folding.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/keymapping.vim $HOME/.config/nvim/init.d/keymapping.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/fzf.vim $HOME/.config/nvim/init.d/fzf.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/autosave.vim $HOME/.config/nvim/init.d/autosave.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/plug.vim $HOME/.config/nvim/init.d/plug.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/plug-install.vim $HOME/.config/nvim/init.d/plug-install.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/syntax.vim $HOME/.config/nvim/init.d/syntax.vim
-ln --force --symbolic $CONFIG_DIR/nvim/init.d/empty-guicursor.vim $HOME/.config/nvim/init.d/empty-guicursor.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.vim                                 $HOME/.config/nvim/init.vim
+ln --force --symbolic $CONFIG_DIR/nvim/autoload/airline/themes/fairyfloss.vim   $HOME/.config/nvim/autoload/airline/themes/fairyfloss.vim
+ln --force --symbolic $CONFIG_DIR/nvim/ftdetect/vtc.vim                         $HOME/.config/nvim/ftdetect/vtc.vim
+ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/tsx.vim                         $HOME/.config/nvim/ftplugin/tsx.vim
+ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/rust.vim                        $HOME/.config/nvim/ftplugin/rust.vim
+ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/javascript.vim                  $HOME/.config/nvim/ftplugin/javascript.vim
+ln --force --symbolic $CONFIG_DIR/nvim/ftplugin/typescript.vim                  $HOME/.config/nvim/ftplugin/typescript.vim
+ln --force --symbolic $CONFIG_DIR/nvim/colors/fairyfloss.vim                    $HOME/.config/nvim/colors/fairyfloss.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/better_o.vim                      $HOME/.config/nvim/init.d/better_o.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/display.vim                       $HOME/.config/nvim/init.d/display.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/misc.vim                          $HOME/.config/nvim/init.d/misc.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/leader.vim                        $HOME/.config/nvim/init.d/leader.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/folding.vim                       $HOME/.config/nvim/init.d/folding.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/keymapping.vim                    $HOME/.config/nvim/init.d/keymapping.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/fzf.vim                           $HOME/.config/nvim/init.d/fzf.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/autosave.vim                      $HOME/.config/nvim/init.d/autosave.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/plug.vim                          $HOME/.config/nvim/init.d/plug.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/plug-install.vim                  $HOME/.config/nvim/init.d/plug-install.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/syntax.vim                        $HOME/.config/nvim/init.d/syntax.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/empty-guicursor.vim               $HOME/.config/nvim/init.d/empty-guicursor.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/zen.vim                           $HOME/.config/nvim/init.d/zen.vim
+ln --force --symbolic $CONFIG_DIR/nvim/init.d/helpers.vim                       $HOME/.config/nvim/init.d/helpers.vim
 
 # Link ranger config files.
 ln --force --symbolic $CONFIG_DIR/ranger/rc.conf $HOME/.config/ranger/rc.conf
@@ -147,4 +149,4 @@ ln --force --symbolic \
 
 # Link custom cowfile.
 ln --force --symbolic $CONFIG_DIR/cowsay/whitepearl.cow $HOME/.config/cowsay/whitepearl.cow
-ln --force --symbolic $CONFIG_DIR/cowsay/whale.cow $HOME/.config/cowsay/whale.cow
+ln --force --symbolic $CONFIG_DIR/cowsay/whale.cow      $HOME/.config/cowsay/whale.cow

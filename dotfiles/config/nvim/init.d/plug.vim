@@ -6,6 +6,9 @@ Plug 'vim-airline/vim-airline'
 " This will be removed at some point, keeping it here for now.
 " Plug 'vim-airline/vim-airline-themes'
 
+" ALE (Asynchronous Linting Engine) - Autoformatting, misc. language support.
+Plug 'w0rp/ale'
+
 " Anyfold - Generic folding
 Plug 'pseewald/vim-anyfold'
 
