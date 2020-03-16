@@ -6,6 +6,9 @@ alias cat='bat'
 # Create a new tmux session named after the current directory.
 alias tnew='tmux new -s "$(basename $(pwd) | sed "s/^[./]//")"'
 
+# Open neovim
+alias v='nvim -O3'
+
 # Clear screen alias.
 alias cls='clear'
 
