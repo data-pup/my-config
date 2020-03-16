@@ -23,10 +23,19 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Define prefix dictionary
 let g:which_key_map =  {}
 
-" Open command prompt with Leader-Leader.
-" Use double space for command
-nnoremap <Leader><space> :
-let g:which_key_map[' '] = 'open command prompt'
+" Navigation commands.
+"
+" These are various ways to move around our code, by searching for symbols,
+" file contents, file names, error messages, or syntactic outline of the
+" document.
+let g:which_key_map[' '] = {
+    \ 'name': 'VIA',
+    \ 'p' : [':Gfp', 'file name'],
+    \ 'r' : [':Rg!', 'regex'],
+    \ 'e' : [':Diagnostics', 'errors'],
+    \ 'o' : [':Outline', 'outline'],
+    \ 's' : ['Symbols', 'symbols'],
+    \ }
 
 " Switch tabs with Leader-h, and Leader-l
 nnoremap <Leader>h :tabprev<CR>

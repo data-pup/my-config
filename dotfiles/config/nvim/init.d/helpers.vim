@@ -2,19 +2,14 @@
 command! -nargs=0 Format :call CocAction('format')
 
 " Show documentation in preview window.
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+" Add `:Outline` command to navigate project via structural outline.
+command! -nargs=0 Outline :CocList --auto-preview --tab outline
 
 " Add `:Symbols` command to navigate project via symbols.
-command! -nargs=0 Symbols :call CocList --auto-preview --interactive --tab --top symbols
+command! -nargs=0 Symbols :CocList --auto-preview --interactive --tab symbols
 
 " Add `:Diagnostics` command to navigate project via compiler diagnostics
-command! -nargs=0 Diagnostics :call CocList --auto-preview --tab --top diagnostics
+command! -nargs=0 Diagnostics :CocList --auto-preview --tab diagnostics
 
 " Toggle relative line numbering.
 function! NumberToggle()
@@ -25,4 +20,3 @@ function! NumberToggle()
     set relativenumber
   endif
 endfunc
-

@@ -45,9 +45,16 @@ nnoremap <silent> <expr> <C-n> g:NERDTree.IsOpen()
 " Remap `Ctrl+p` to the 'Gfp' command defined in `fzf.vim`
 nnoremap <C-p> :Gfp<CR>
 
-" Get hover information with `gh`, and documentation with `gH`
+" Get hover information with `gh`, and documentation with `K`
 nmap gh <Plug>(ale_hover)
-nmap gH :call show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunc
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " Switch buffers with PageUp and PageDown.
 nnoremap <pageup> :bprev<cr>
@@ -75,12 +82,12 @@ nnoremap `l :vertical resize -5<CR>
 " <F10> finds implementation blocks for symbol type.
 " <F11> LEFT UNMAPPED (conflicts with fullscreen mapping in i3)
 " <F12> jumps to the definition of a symbol
-nmap <silent> <F1>  :Gfp
-nmap <silent> <F2>  :Rg!
-nmap <silent> <F3>  :Symbols
+nmap <silent> <F1>  :Gfp<CR>
+nmap <silent> <F2>  :Rg!<CR>
+nmap <silent> <F3>  :Symbols<CR>
 nmap <silent> <F4>  :TagbarToggle<CR>
 
-nmap <silent> <F5>  :Diagnostics
+nmap <silent> <F5>  :Diagnostics<CR>
 " --- F6 LEFT UNMAPPED
 nmap <silent> <F7>  <Plug>(coc-diagnostic-prev)
 nmap <silent> <F8>  <Plug>(coc-diagnostic-next)
