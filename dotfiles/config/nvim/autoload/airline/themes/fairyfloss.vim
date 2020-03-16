@@ -97,14 +97,3 @@ let g:airline#themes#fairyfloss#palette.commandline_modified = s:modified
 let g:airline#themes#fairyfloss#palette.accents = {
   \ 'red': [ s:guiFuschia, '' , 160 , ''  ]
   \ }
-
-" CtrlP
-if !get(g:, 'loaded_ctrlp', 0)
-  finish
-endif
-
-let s:CP1 = [ s:guiWhite , s:guiDarkGray , s:ctermWhite , s:ctermDarkGray  ]
-let s:CP2 = [ s:guiWhite , s:guiGray , s:ctermWhite , s:ctermDarkGray  ]
-let s:CP3 = [ s:guiWhite , s:guiLavender , s:ctermWhite , s:ctermLavender  ]
-
-let g:airline#themes#fairyfloss#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(s:CP1, s:CP2, s:CP3)
