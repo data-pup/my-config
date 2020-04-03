@@ -4,8 +4,9 @@ alias ga="git add -p"
 
 alias gbv="git branch -vv"
 
+alias gco="git checkout"
 alias gcb="git checkout -b"
-alias gco="git checkout -p"
+alias gcp="git checkout -p"
 
 alias gcv="git commit -v"
 
