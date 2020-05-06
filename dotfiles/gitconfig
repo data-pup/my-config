@@ -109,7 +109,7 @@
 	watch-diff-cached = !watch --color -n 5 git diff --color=always --stat --cached
 
 	# Watch git log.
-	watch-log = !watch --color -n 20 git log --oneline --decorate --graph --color=always
+	watch-log = !watch --color -n 20 git log-graph --color=always
 
 	# Watch git status.
 	watch-status = !watch -n 10 --color git -c color.status=always status --short
