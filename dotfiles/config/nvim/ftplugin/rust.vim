@@ -20,9 +20,3 @@ autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.
 
 " Enable specific column markers.
 set colorcolumn=101,121
-
-" Use `syntax` mode for folding.
-" This behaves better when dealing with functions whose signature spans
-" multiple lines; `where` trait bounds clauses for example, will not be hidden
-" behind the fold.
-set foldmethod=syntax

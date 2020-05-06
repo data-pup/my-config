@@ -1,5 +1,5 @@
-" activate Anyfold for all filetypes
-autocmd Filetype * AnyFoldActivate
+" Use `syntax` mode for folding.
+set foldmethod=syntax
 
 " start with all folds open
 set foldlevel=99

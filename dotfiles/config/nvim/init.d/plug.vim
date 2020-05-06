@@ -6,9 +6,6 @@ Plug 'vim-airline/vim-airline'
 " ALE (Asynchronous Linting Engine) - Autoformatting, misc. language support.
 Plug 'w0rp/ale'
 
-" Anyfold - Generic folding
-Plug 'pseewald/vim-anyfold'
-
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
