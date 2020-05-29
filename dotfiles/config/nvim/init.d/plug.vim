@@ -3,9 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Airline - statusline plugin.
 Plug 'vim-airline/vim-airline'
 
-" ALE (Asynchronous Linting Engine) - Autoformatting, misc. language support.
-Plug 'w0rp/ale'
-
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
