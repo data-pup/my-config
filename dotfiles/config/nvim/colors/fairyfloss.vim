@@ -55,8 +55,8 @@ hi WarningMsg guifg=#f8f8f0 guibg=#f92672 gui=NONE
 
 " Completion {{{
 
-hi Pmenu guifg=fg guibg=#ae81ff gui=NONE
-hi PmenuSel guifg=fg guibg=#ffb8d1 gui=bold
+hi Pmenu guifg=fg guibg=#3a374d gui=NONE
+hi PmenuSel guifg=#ffb8d1 guibg=bg gui=bold
 "hi PmenuSbar
 "hi PmenuThumb
 
