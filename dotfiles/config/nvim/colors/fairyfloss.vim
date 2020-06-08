@@ -12,9 +12,12 @@ let g:colors_name = 'fairyfloss'
 
 " First, some colors for `coc.nvim`. See `help coc-highlight` for more.
 hi CocErrorSign guifg=#ff857f guibg=#3a374d
-hi CocWarningSign guifg=#ff857f guibg=bg
 hi CocErrorHighlight guifg=#ff857f guibg=NONE
 hi CocErrorLine guifg=fg guibg=#3a374d
+
+hi CocWarningSign guifg=#fffea0 guibg=#3a374d
+hi CocWarningHighlight guifg=#fffea0 guibg=NONE
+hi CocWarningLine guifg=fg guibg=#3a374d
 
 " If we would like an opaque background:
 hi Normal guifg=#f8f8f0 guibg=#5a5475 gui=NONE
